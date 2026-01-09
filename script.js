@@ -1,3 +1,106 @@
+// Floating Background Images
+const floatingBgs = document.querySelectorAll('.floating-bg');
+const floatImages = [
+    'floats/3.png',
+    'floats/aws.JPG',
+    'floats/DSC04731.jpg',
+    'floats/IMG_3914.jpg',
+    'floats/IMG_3944.jpg',
+    'floats/IMG_4136.jpg',
+    'floats/IMG_4888.jpg',
+    'floats/IMG_6546.jpg'
+];
+
+function createFloatingImage(container) {
+    const img = document.createElement('img');
+    img.classList.add('floating-img');
+
+    // Random image from array
+    img.src = floatImages[Math.floor(Math.random() * floatImages.length)];
+
+    // Random size between 80px and 180px (bigger)
+    const size = Math.random() * 100 + 80;
+    img.style.width = size + 'px';
+    img.style.height = size + 'px';
+
+    // Random horizontal position
+    img.style.left = Math.random() * 90 + '%';
+
+    // Random animation duration between 20s and 40s
+    const duration = Math.random() * 20 + 20;
+    img.style.animationDuration = duration + 's';
+
+    // Random delay so they don't all start together
+    img.style.animationDelay = Math.random() * 15 + 's';
+
+    // Random opacity between 0.2 and 0.35 (more opaque)
+    img.style.opacity = Math.random() * 0.15 + 0.2;
+
+    container.appendChild(img);
+
+    // Remove and recreate after animation completes
+    img.addEventListener('animationend', () => {
+        img.remove();
+        createFloatingImage(container);
+    });
+}
+
+// Create initial floating images for each container
+floatingBgs.forEach(container => {
+    for (let i = 0; i < 6; i++) {
+        setTimeout(() => createFloatingImage(container), i * 2500);
+    }
+});
+
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
+const cursorFollower = document.querySelector('.cursor-follower');
+
+if (cursor && cursorFollower) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursorFollower.style.left = e.clientX + 'px';
+        cursorFollower.style.top = e.clientY + 'px';
+    });
+
+    // Hover effect on interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .btn, .skill-tag, .exp-card, .project-card-new, .carousel-nav, .carousel-dot');
+
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+            cursorFollower.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+            cursorFollower.classList.remove('hover');
+        });
+    });
+
+    // Click effect
+    document.addEventListener('mousedown', () => {
+        cursor.classList.add('clicking');
+        cursorFollower.classList.add('clicking');
+    });
+
+    document.addEventListener('mouseup', () => {
+        cursor.classList.remove('clicking');
+        cursorFollower.classList.remove('clicking');
+    });
+
+    // Hide cursor when leaving window
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+        cursorFollower.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+        cursorFollower.style.opacity = '1';
+    });
+}
+
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');

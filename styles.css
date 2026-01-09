@@ -5,6 +5,92 @@
     box-sizing: border-box;
 }
 
+/* Custom Cursor */
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.cursor-follower {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--primary-light);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+}
+
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2);
+    background: var(--secondary);
+}
+
+.cursor-follower.hover {
+    width: 50px;
+    height: 50px;
+    border-color: var(--secondary);
+}
+
+.cursor.clicking {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.cursor-follower.clicking {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .cursor, .cursor-follower {
+        display: none;
+    }
+}
+
+/* Floating Background */
+.floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floating-img {
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.25;
+    pointer-events: none;
+    animation: float-drift linear infinite;
+}
+
+@keyframes float-drift {
+    0% {
+        transform: translateY(100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+    }
+}
+
+/* Ensure sections with floating bg have relative positioning */
+.hero, .about-section {
+    position: relative;
+}
+
 :root {
     --primary: #6366f1;
     --primary-dark: #4f46e5;
