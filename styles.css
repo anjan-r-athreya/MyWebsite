@@ -74,21 +74,25 @@
     object-fit: cover;
     opacity: 0.25;
     pointer-events: none;
+    bottom: -200px;
     animation: float-drift linear infinite;
 }
 
 @keyframes float-drift {
     0% {
-        transform: translateY(100%) rotate(0deg);
+        bottom: -200px;
+        transform: rotate(0deg);
     }
     100% {
-        transform: translateY(-200px) rotate(360deg);
+        bottom: 100%;
+        transform: rotate(360deg);
     }
 }
 
 /* Ensure sections with floating bg have relative positioning */
 .hero, .about-section {
     position: relative;
+    overflow: hidden;
 }
 
 :root {
