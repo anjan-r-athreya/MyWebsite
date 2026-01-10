@@ -3,12 +3,12 @@ const floatingBgs = document.querySelectorAll('.floating-bg');
 const floatImages = [
     'floats/3.png',
     'floats/aws.JPG',
-    'floats/DSC04731.JPG',
-    'floats/IMG_3914.JPG',
-    'floats/IMG_3944.JPG',
-    'floats/IMG_4136.JPG',
-    'floats/IMG_4888.JPG',
-    'floats/IMG_6546.JPG'
+    'floats/DSC04731.jpg',
+    'floats/IMG_3914.jpg',
+    'floats/IMG_3944.jpg',
+    'floats/IMG_4136.jpg',
+    'floats/IMG_4888.jpg',
+    'floats/IMG_6546.jpg'
 ];
 
 function createFloatingImage(container) {
