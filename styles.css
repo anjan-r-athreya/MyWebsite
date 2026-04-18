@@ -702,9 +702,9 @@ body {
 /* Experience Details Grid */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 60px auto 0;
 }
 
@@ -768,7 +768,7 @@ body {
 .education-section {
     padding: 60px 24px 80px;
     position: relative;
-    background: linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.75)), url('sbu-campus.jpg') center center / cover no-repeat;
+    background: url('sbu-campus.jpg') center center / cover no-repeat;
 }
 
 .university-card {
