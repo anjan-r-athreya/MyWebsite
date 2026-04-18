@@ -253,7 +253,7 @@ window.addEventListener('scroll', () => {
 const style = document.createElement('style');
 style.textContent = `
     .nav-links a.active {
-        color: #A89078;
+        color: #CCCCCC;
     }
 `;
 document.head.appendChild(style);
@@ -317,5 +317,5 @@ if (carousel) {
 }
 
 // Console easter egg
-console.log('%c Welcome to Anjan Athreya\'s Portfolio! ', 'background: linear-gradient(135deg, #8B7355, #B8860B); color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
-console.log('%c Interested in collaborating? Reach out at anjan.r.athreya@gmail.com ', 'color: #8B7355; font-size: 12px;');
+console.log('%c Welcome to Anjan Athreya\'s Portfolio! ', 'background: #333333; color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
+console.log('%c Interested in collaborating? Reach out at anjan.r.athreya@gmail.com ', 'color: #888888; font-size: 12px;');
