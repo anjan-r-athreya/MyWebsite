@@ -635,9 +635,11 @@
                 </div>
 
                 <div class="project-showcase-content">
-                    <p class="project-description">
-                        iOS app for generating precise looped running routes for distance training. Built for runners who want to plan routes that start and end at the same location while hitting a specific distance target.
-                    </p>
+                    <ul class="project-description-list">
+                        <li>Developed an iOS training app with precise (+/-0.1 mile) dynamic route generation for custom distance goals, leveraging MapKit, CoreLocation, and Mapbox frameworks; trained with it for the San Francisco Marathon</li>
+                        <li>Cut API load by 50% by optimizing search scaling, reducing route generation attempts by 40% while maintaining ±1% distance accuracy under a geospatial constraint (2 edges per waypoint)</li>
+                        <li>Drove product refinement through user insights and social media marketing (YouTube, Instagram), generating 10,000+ views and building a beta community of 100+ users with active feedback from 10+ early testers</li>
+                    </ul>
                     <div class="project-tech-stack">
                         <span>Swift</span>
                         <span>MapKit</span>
@@ -669,14 +671,54 @@
                 </div>
 
                 <div class="project-showcase-content">
-                    <p class="project-description">
-                        CLI tool that transforms Jupyter notebooks into production-ready Python applications. Features AI-powered code enhancement via Claude API, production readiness analysis, and automatic function extraction for seamless notebook-to-production workflows.
-                    </p>
+                    <ul class="project-description-list">
+                        <li>Built an AI-powered tool that automatically converts messy Jupyter notebooks into production-ready Python projects, reducing deployment time from hours to minutes through intelligent code analysis and function extraction</li>
+                        <li>Developed a full-stack solution with both CLI and Streamlit web interface, featuring automated production readiness scoring (0-10), execution order validation, and Claude AI integration for generating optimized code with proper documentation and error handling</li>
+                        <li>Engineered a multi-phase refactoring pipeline using AST analysis and LLM enhancement that transforms exploratory data science code into maintainable software projects with proper structure, configuration management, and 25+ automated tests achieving full code coverage</li>
+                    </ul>
                     <div class="project-tech-stack">
                         <span>Python</span>
                         <span>Click</span>
                         <span>Claude API</span>
                         <span>Jupyter</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="project-divider"></div>
+
+            <!-- Project 3: arXiv MCP -->
+            <article class="project-showcase" id="project-arxiv-mcp">
+                <div class="project-showcase-header">
+                    <div class="project-showcase-title">
+                        <h3>arXiv MCP Server</h3>
+                        <span class="project-lang">Python / MCP</span>
+                    </div>
+                    <a href="https://github.com/anjan-r-athreya/arXiv-mcp" target="_blank" class="project-github-link">
+                        View on GitHub
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                </div>
+
+                <div class="project-showcase-media">
+                    <div class="project-image-container">
+                        <img src="arxiv-mcp-gif.gif" alt="arXiv MCP Server - Claude Code interface">
+                    </div>
+                </div>
+
+                <div class="project-showcase-content">
+                    <ul class="project-description-list">
+                        <li>MCP server giving Claude and Cursor a persistent, semantically searchable arXiv paper library</li>
+                        <li>Dual-storage architecture (SQLite + ChromaDB) with local embeddings for semantic search across 39K+ chars of extracted PDF text</li>
+                        <li>15 tools spanning the full research workflow: paper import, fulltext search, PDF annotation extraction</li>
+                        <li>Preprint-to-DOI tracking via Semantic Scholar/Crossref, duplicate detection, and KMeans topic clustering</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>MCP</span>
+                        <span>SQLite</span>
+                        <span>ChromaDB</span>
+                        <span>Semantic Scholar API</span>
                     </div>
                 </div>
             </article>

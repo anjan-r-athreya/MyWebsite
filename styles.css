@@ -1507,6 +1507,18 @@ a.view-project:hover {
     margin-bottom: 24px;
 }
 
+.project-description-list {
+    font-size: 1.1rem;
+    color: var(--gray-light);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.project-description-list li {
+    margin-bottom: 8px;
+}
+
 .project-tech-stack {
     display: flex;
     flex-wrap: wrap;
