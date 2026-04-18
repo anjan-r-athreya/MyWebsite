@@ -123,9 +123,9 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+        navbar.style.background = 'rgba(26, 23, 21, 0.98)';
     } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.9)';
+        navbar.style.background = 'rgba(26, 23, 21, 0.9)';
     }
 });
 
@@ -253,7 +253,7 @@ window.addEventListener('scroll', () => {
 const style = document.createElement('style');
 style.textContent = `
     .nav-links a.active {
-        color: #818cf8;
+        color: #A89078;
     }
 `;
 document.head.appendChild(style);
@@ -317,5 +317,5 @@ if (carousel) {
 }
 
 // Console easter egg
-console.log('%c Welcome to Anjan Athreya\'s Portfolio! ', 'background: linear-gradient(135deg, #6366f1, #0ea5e9); color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
-console.log('%c Interested in collaborating? Reach out at anjan.r.athreya@gmail.com ', 'color: #6366f1; font-size: 12px;');
+console.log('%c Welcome to Anjan Athreya\'s Portfolio! ', 'background: linear-gradient(135deg, #8B7355, #B8860B); color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
+console.log('%c Interested in collaborating? Reach out at anjan.r.athreya@gmail.com ', 'color: #8B7355; font-size: 12px;');

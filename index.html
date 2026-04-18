@@ -20,6 +20,7 @@
                 <li><a href="#aboutme">More About Me</a></li>
                 <li><a href="#timeline">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -230,7 +231,27 @@
                 </div>
 
                 <div class="timeline-h-item timeline-h-future">
-                    <div class="timeline-h-date">May 2027</div>
+                    <div class="timeline-h-date">Summer 2026</div>
+                    <div class="timeline-h-marker marker-future"></div>
+                    <div class="timeline-h-content">
+                        <span class="timeline-badge internship">Incoming</span>
+                        <h3>Full Stack SWE</h3>
+                        <h4>North Atlantic Industries</h4>
+                    </div>
+                </div>
+
+                <div class="timeline-h-item timeline-h-future">
+                    <div class="timeline-h-date">Fall 2026</div>
+                    <div class="timeline-h-marker marker-future"></div>
+                    <div class="timeline-h-content">
+                        <span class="timeline-badge internship">Incoming</span>
+                        <h3>Customer Success Engineer</h3>
+                        <h4>IBM</h4>
+                    </div>
+                </div>
+
+                <div class="timeline-h-item timeline-h-future">
+                    <div class="timeline-h-date">May 2028</div>
                     <div class="timeline-h-marker marker-future"></div>
                     <div class="timeline-h-content">
                         <span class="timeline-badge graduation">Graduation</span>
@@ -244,11 +265,35 @@
             <div class="experience-grid">
                 <div class="exp-card">
                     <div class="exp-header">
+                        <img src="logos/nai.webp" alt="North Atlantic Industries" class="exp-logo">
+                        <div class="exp-title">
+                            <h3>Full Stack Software Engineer</h3>
+                            <h4>North Atlantic Industries</h4>
+                            <span class="exp-date">Summer 2026 (Incoming)</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">Incoming full stack software engineering role at NAI in Bohemia, NY.</p>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <img src="logos/ibm.png" alt="IBM" class="exp-logo">
+                        <div class="exp-title">
+                            <h3>Customer Success Engineer</h3>
+                            <h4>IBM</h4>
+                            <span class="exp-date">Fall 2026 (Incoming)</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">Incoming customer success engineering role at IBM in San Francisco, CA.</p>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
                         <img src="logos/lightbox.jpg" alt="LightBox EDR" class="exp-logo">
                         <div class="exp-title">
                             <h3>Software Dev Intern</h3>
                             <h4>LightBox EDR</h4>
-                            <span class="exp-date">May - Jul 2024</span>
+                            <span class="exp-date">May - Jun 2024</span>
                         </div>
                     </div>
                     <p class="exp-desc">Built ETL pipelines and geospatial data tools using Python and ArcGIS to process environmental site data.</p>
@@ -275,7 +320,7 @@
                             <span class="exp-date">Mar 2025 - Present</span>
                         </div>
                     </div>
-                    <p class="exp-desc">Leading a 700+ member club, organizing workshops, securing $2.2K in sponsorships, and teaching RL to 80+ peers.</p>
+                    <p class="exp-desc">Leading an 800+ member club, organizing workshops, securing $2K+ in sponsorships, and teaching RL to 80+ peers.</p>
                 </div>
 
                 <div class="exp-card">
@@ -308,7 +353,7 @@
                         <p class="university-college">College of Engineering and Applied Sciences</p>
                         <p class="university-degree">B.S. in Computer Science (Accelerated)</p>
                         <p class="university-gpa">1st-year GPA: 3.6</p>
-                        <p class="university-date">Expected May 2027</p>
+                        <p class="university-date">Expected May 2028</p>
                     </div>
                 </div>
 
@@ -332,8 +377,8 @@
                         <h4>Campus Involvement</h4>
                         <div class="involvement-grid">
                             <div class="involvement-item">
-                                <strong>AI Community @ SBU (700+ members)</strong>
-                                <p>Project Manager directing 20+ workshops, guest speakers, and $2.2K sponsorships. Built RL models (Q-Learning, DQN) to teach 80+ peers.</p>
+                                <strong>AI Community @ SBU (800+ members)</strong>
+                                <p>Project Manager directing 15+ workshops, guest speakers, and $2K+ sponsorships. Built RL models (Q-Learning, DQN) to teach 80+ peers.</p>
                             </div>
                             <div class="involvement-item">
                                 <strong>Athletics & Music</strong>
@@ -402,9 +447,21 @@
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">What I'm building</p>
 
-            <div class="projects-grid-new">
-                <div class="project-card-new project-card-video">
-                    <div class="project-preview project-preview-video">
+            <!-- Project 1: Circular -->
+            <article class="project-showcase" id="project-circular">
+                <div class="project-showcase-header">
+                    <div class="project-showcase-title">
+                        <h3>Circular</h3>
+                        <span class="project-lang">Swift / iOS</span>
+                    </div>
+                    <a href="https://github.com/anjan-r-athreya/Circular" target="_blank" class="project-github-link">
+                        View on GitHub
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                </div>
+
+                <div class="project-showcase-media">
+                    <div class="project-video-container">
                         <iframe
                             src="https://www.youtube.com/embed/z8spHShT19k"
                             title="Circular App Demo"
@@ -413,43 +470,54 @@
                             allowfullscreen>
                         </iframe>
                     </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <h3>Circular</h3>
-                            <span class="project-lang">Swift</span>
-                        </div>
-                        <p>iOS app for generating precise looped running routes for distance training. Features route management and coordinate utilities.</p>
-                        <div class="project-meta">
-                            <a href="https://github.com/anjan-r-athreya/Circular" target="_blank" class="view-project">View on GitHub <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="project-card-new project-card-video">
-                    <div class="project-preview project-preview-image">
+                <div class="project-showcase-content">
+                    <p class="project-description">
+                        iOS app for generating precise looped running routes for distance training. Built for runners who want to plan routes that start and end at the same location while hitting a specific distance target.
+                    </p>
+                    <div class="project-tech-stack">
+                        <span>Swift</span>
+                        <span>MapKit</span>
+                        <span>CoreLocation</span>
+                        <span>iOS</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="project-divider"></div>
+
+            <!-- Project 2: nb2prod -->
+            <article class="project-showcase" id="project-nb2prod">
+                <div class="project-showcase-header">
+                    <div class="project-showcase-title">
+                        <h3>nb2prod</h3>
+                        <span class="project-lang">Python</span>
+                    </div>
+                    <a href="https://github.com/anjan-r-athreya/notebook2production" target="_blank" class="project-github-link">
+                        View on GitHub
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                </div>
+
+                <div class="project-showcase-media">
+                    <div class="project-image-container">
                         <img src="logos/nb2prod-screenshot.jpeg" alt="nb2prod - Notebook to Production interface">
                     </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <h3>nb2prod</h3>
-                            <span class="project-lang">Python</span>
-                        </div>
-                        <p>CLI tool that transforms Jupyter notebooks into production-ready Python apps. Features AI-powered code enhancement via Claude API, production readiness analysis, and automatic function extraction.</p>
-                        <div class="project-meta">
-                            <a href="https://github.com/anjan-r-athreya/notebook2production" target="_blank" class="view-project">View on GitHub <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                        </div>
+                </div>
+
+                <div class="project-showcase-content">
+                    <p class="project-description">
+                        CLI tool that transforms Jupyter notebooks into production-ready Python applications. Features AI-powered code enhancement via Claude API, production readiness analysis, and automatic function extraction for seamless notebook-to-production workflows.
+                    </p>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Click</span>
+                        <span>Claude API</span>
+                        <span>Jupyter</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- <div class="languages-section">
-                <h3>Languages</h3>
-                <div class="language-tags">
-                    <span class="lang-tag">English <small>(Native)</small></span>
-                    <span class="lang-tag">Spanish <small>(Native)</small></span>
-                    <span class="lang-tag">Tamil <small>(Elementary)</small></span>
-                </div>
-            </div> -->
+            </article>
         </div>
     </section>
 
