@@ -767,7 +767,8 @@ body {
 /* Education Section - Expanded */
 .education-section {
     padding: 60px 24px 80px;
-    background: var(--dark-light);
+    position: relative;
+    background: linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.75)), url('sbu-campus.jpg') center center / cover no-repeat;
 }
 
 .university-card {
@@ -1084,12 +1085,6 @@ body {
 .lang-tag small {
     color: var(--gray);
     margin-left: 4px;
-}
-
-/* Education Section */
-.education-section {
-    padding: 100px 24px;
-    background: var(--dark);
 }
 
 .education-grid {
