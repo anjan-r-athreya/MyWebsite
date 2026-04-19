@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anjan Athreya — ~/index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3d-blue-3">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="gridfloor" aria-hidden="true"></div>
+
+<div class="cursor-crosshair">
+  <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9"/><path d="M14 1v8M14 19v8M1 14h8M19 14h8"/></svg>
+</div>
+<div class="cursor-trail"></div>
+
+<!-- ───────────── TOPBAR ───────────── -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#hero" class="brand"><span class="sq"></span> anjan.athreya</a>
+    <span class="path">~/<b>index</b></span>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#life">life</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#education">edu</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <span class="status"><span><span class="dot"></span>available · summer '26</span><span class="sep">|</span><span data-clock>00:00:00</span> EST</span>
+  </div>
+</header>
+
+<!-- ───────────── HERO ───────────── -->
+<section id="hero" class="hero">
+  <div class="float-grid" aria-hidden="true"></div>
+  <span class="float-orb o1" aria-hidden="true"></span>
+  <span class="float-orb o2" aria-hidden="true"></span>
+  <span class="float-orb o3" aria-hidden="true"></span>
+  <span class="float-orb o4" aria-hidden="true"></span>
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="track">
+      <span>AI COMMUNITY @ SBU · 800+ MEMBERS</span>
+      <span>SF MARATHON FINISHER · <em>4:54</em></span>
+      <span>PCD WARRIOR · LUNGS AT 60% · STILL RUNNING</span>
+      <span>INCOMING @ NAI · SUMMER '26</span>
+      <span>INCOMING @ IBM · FALL '26</span>
+      <span>CURRENTLY BUILDING · <em>CIRCULAR</em></span>
+      <span>ML RESEARCH ASSISTANT · SBU CEAS</span>
+      <span>VIOLIN · WRESTLING · TRACK · VOLLEYBALL</span>
+    </div>
+  </div>
+
+  <div class="hero-left">
+    <span class="eyebrow tag">portfolio / v3.0 · fairfield, ct → stony brook, ny</span>
+    <h1 class="hero-name">
+      anjan<br>
+      athreya<span class="and">.</span><span class="cursor"></span>
+    </h1>
+    <dl class="hero-sub">
+      <dt>// role</dt><dd>CS + Applied Math @ Stony Brook · accel. B.S. Dec 2027</dd>
+      <dt>// work</dt><dd>ML Research Assistant · AI Community PM · ex-LightBox</dd>
+      <dt>// building</dt><dd><a href="#projects">circular.app</a> — adaptive run-route iOS</dd>
+      <dt>// training</dt><dd>next marathon · running w/ PCD for the tenth year</dd>
+    </dl>
+    <div class="hero-cta">
+      <a class="btn" href="#projects">see the work <span class="arrow">↗</span></a>
+      <a class="btn ghost" href="#contact">say hello <span class="arrow">↗</span></a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="term">
+      <div class="term-bar">
+        <span class="d r"></span><span class="d y"></span><span class="d g"></span>
+        <span class="t">— anjan@sbu : ~/focus —</span>
+      </div>
+      <div class="term-body"></div>
+    </div>
+
+    <div class="route-card">
+      <div class="head"><span>sf marathon · 08.2025</span><b>26.22 mi</b></div>
+      <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+        <defs>
+          <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--rule)" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g)"/>
+        <path id="routePath" d="M 8 90 Q 40 40, 80 60 T 150 50 Q 190 30, 220 70 T 300 40 Q 340 55, 380 25" fill="none" stroke="oklch(0.62 0.18 38)" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="8" cy="90" r="4" fill="var(--ink)"/>
+        <circle cx="380" cy="25" r="5" fill="oklch(0.62 0.18 38)"/>
+      </svg>
+      <div class="stat">pace <b>11:14 / mi</b></div>
+      <div class="stat">elev. <b>+1,320 ft</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── ABOUT / MANIFESTO ───────────── -->
+<section id="about" class="manifesto">
+  <div class="section-head reveal">
+    <h2>A <em>little</em><br>about me.</h2>
+    <div class="meta">
+      <div>FILE <b>about.md</b></div>
+      <div>UPDATED <b>2026</b></div>
+    </div>
+  </div>
+
+  <div class="manifesto-grid">
+    <div class="portrait reveal">
+      <span class="caption">// anjan.r.athreya</span>
+      <img src="assets/pfp.jpg" alt="Anjan Athreya">
+      <span class="tag">fairfield → stony brook</span>
+    </div>
+    <div class="reveal">
+      <p class="lede">I was born with <em>primary ciliary dyskinesia</em> — my lungs clear slower than most. I chose to run marathons anyway.</p>
+      <p style="margin-top:28px">That's the frame for everything else: I build tools that turn constraints into <em>compounding</em> advantages. ML research at SBU. Circular, the iOS training app I ran my first marathon on. nb2prod, turning messy notebooks into shipped software. A club I run with 800 other curious people. I like systems that make the next person faster.</p>
+    </div>
+  </div>
+
+  <div class="stats reveal">
+    <div class="s"><div class="n">800+</div><div class="l">ai community members led</div></div>
+    <div class="s"><div class="n">4:54</div><div class="l">sf marathon finish time</div></div>
+    <div class="s"><div class="n">$2k+</div><div class="l">sponsorships secured</div></div>
+    <div class="s"><div class="n">10k+</div><div class="l">views · circular marketing</div></div>
+  </div>
+</section>
+
+<!-- ───────────── EXPERIENCE ───────────── -->
+<section id="experience" class="experience">
+  <div class="section-head reveal">
+    <h2>experience<em>.log</em></h2>
+    <div class="meta">
+      <div>ENTRIES <b>10</b></div>
+      <div>NOW <b>dec 2025 — present</b></div>
+    </div>
+  </div>
+
+  <div class="xp-log reveal">
+    <div class="xp-row future">
+      <div class="date">FALL 2026</div>
+      <div class="logo"><img src="assets/logos/ibm.png" alt="IBM"></div>
+      <div class="title"><h3>Customer Success Engineer</h3><span>IBM · San Francisco, CA</span></div>
+      <div class="badge">incoming</div>
+    </div>
+    <div class="xp-row future">
+      <div class="date">SUMMER 2026</div>
+      <div class="logo"><img src="assets/logos/nai.webp" alt="NAI"></div>
+      <div class="title"><h3>Full Stack Software Engineer</h3><span>North Atlantic Industries · Bohemia, NY</span></div>
+      <div class="badge">incoming</div>
+    </div>
+    <div class="xp-row current">
+      <div class="date">DEC 2025 — NOW</div>
+      <div class="logo"><img src="assets/logos/sbu.jpeg" alt="SBU CEAS"></div>
+      <div class="title"><h3>Machine Learning Research Assistant</h3><span>Stony Brook · College of Engineering</span></div>
+      <div class="badge">current</div>
+    </div>
+    <div class="xp-row">
+      <div class="date">JUN — AUG 2025</div>
+      <div class="logo"><img src="assets/logos/lavner.jpeg" alt="Lavner"></div>
+      <div class="title"><h3>STEM Instructor</h3><span>Lavner Education · summer camps</span></div>
+      <div class="badge">teaching</div>
+    </div>
+    <div class="xp-row">
+      <div class="date">MAR 2025 — NOW</div>
+      <div class="logo"><img src="assets/logos/AIC.jpeg" alt="AIC"></div>
+      <div class="title"><h3>Project Manager</h3><span>AI Community @ SBU · 800+ members</span></div>
+      <div class="badge">leadership</div>
+    </div>
+    <div class="xp-row">
+      <div class="date">MAY — JUL 2024</div>
+      <div class="logo"><img src="assets/logos/lightbox.jpg" alt="LightBox"></div>
+      <div class="title"><h3>Software Dev Intern</h3><span>LightBox EDR · ETL + geospatial</span></div>
+      <div class="badge">internship</div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── LIFE CAROUSEL ───────────── -->
+<section id="life" class="life">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>life <em>outside</em> the repo.</h2>
+      <div class="meta">
+        <div>ALBUM <b>life.jpg</b></div>
+        <div>FRAMES <b>08</b></div>
+      </div>
+    </div>
+    <div class="life-nav"><span class="count">01 / 08</span>
+      <button class="life-prev" aria-label="prev">←</button>
+      <button class="life-next" aria-label="next">→</button>
+    </div>
+  </div>
+
+  <div class="life-track">
+    <article class="life-card">
+      <div class="meta"><span>01</span><span>DORM</span></div>
+      <img src="assets/life/01.png" alt="Dorm room">
+      <div class="cap"><b>// the wall.</b> Ali. Schwarzenegger. Balboa. A made bed. Naruto, marathon bibs, the brothers. The things I keep close to stay disciplined.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>02</span><span>TEACHING</span></div>
+      <img src="assets/life/02.png" alt="Teaching">
+      <div class="cap"><b>// AI community.</b> Spreading what I've learned about ML/RL to 80+ peers at SBU through workshops I build end-to-end.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>03</span><span>KITCHEN</span></div>
+      <img src="assets/life/03.png" alt="Food">
+      <div class="cap"><b>// cooking.</b> My newest endeavor — food is how I build real bonds with the people I collaborate with.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>04</span><span>OUTSIDE</span></div>
+      <img src="assets/life/04.png" alt="Nature">
+      <div class="cap"><b>// nature.</b> Clears my head when the problem won't solve at the desk.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>05</span><span>FAMILY</span></div>
+      <img src="assets/life/05.png" alt="Brothers">
+      <div class="cap"><b>// brothers.</b> Arjun set my path in CS/math. Ashwath taught me to care deeply. Built-in mentors.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>06</span><span>FRIENDS</span></div>
+      <img src="assets/life/06.png" alt="Friends">
+      <div class="cap"><b>// friends.</b> The best stretches of my life have all had the same people in them.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>07</span><span>MARATHON</span></div>
+      <img src="assets/life/07.png" alt="Marathon">
+      <div class="cap"><b>// 26.22 mi.</b> San Francisco. 4:54. Running is how I fight a genetic condition the doctors wanted me to accept.</div>
+    </article>
+    <article class="life-card">
+      <div class="meta"><span>08</span><span>SISTER</span></div>
+      <img src="assets/life/08.png" alt="Sister">
+      <div class="cap"><b>// Mayaa.</b> My little sister — reminds me to be present and actually take the break.</div>
+    </article>
+  </div>
+
+  <div class="life-strip">
+    <div class="thumb active"><img src="assets/life/01.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/02.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/03.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/04.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/05.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/06.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/07.png" alt=""></div>
+    <div class="thumb"><img src="assets/life/08.png" alt=""></div>
+  </div>
+</section>
+
+<!-- ───────────── PROJECTS ───────────── -->
+<section id="projects" class="projects">
+  <div class="section-head reveal">
+    <h2>what I'm <em>building</em>.</h2>
+    <div class="meta">
+      <div>REPOS <b>3</b></div>
+      <div>STATUS <b>shipping</b></div>
+    </div>
+  </div>
+
+  <div class="pjx">
+    <!-- Circular -->
+    <article class="pj reveal">
+      <div class="pj-body">
+        <div class="num">01 — iOS · Swift</div>
+        <h3><em>Circular</em><br>run any distance.</h3>
+        <span class="lang">Swift · MapKit · CoreLocation · Mapbox</span>
+        <ul>
+          <li>iOS training app that generates <b>±0.1 mile</b> custom-distance routes using MapKit + CoreLocation. I trained for the SF Marathon on it.</li>
+          <li>Cut API load <b>50%</b> and route-gen attempts <b>40%</b> via search scaling, holding ±1% accuracy under a 2-edges-per-waypoint constraint.</li>
+          <li>Built a beta of <b>100+ users</b> and <b>10k+ views</b> on YouTube/Instagram driving iterative feedback.</li>
+        </ul>
+        <div class="pj-stack"><span>Swift</span><span>MapKit</span><span>CoreLocation</span><span>iOS</span></div>
+        <div class="pj-links"><a class="btn" href="https://github.com/anjan-r-athreya/Circular" target="_blank">github <span class="arrow">↗</span></a></div>
+      </div>
+      <div class="pj-media">
+        <span class="mtag">APP · iOS</span>
+        <img src="assets/circularthumbnail.jpg" alt="Circular app thumbnail">
+      </div>
+    </article>
+
+    <!-- nb2prod -->
+    <article class="pj reveal">
+      <div class="pj-body">
+        <div class="num">02 — Python · CLI + web</div>
+        <h3>notebook<em>2</em>prod.</h3>
+        <span class="lang">Python · Click · Streamlit · Claude</span>
+        <ul>
+          <li>Converts messy Jupyter notebooks into production-ready Python projects — <b>hours → minutes</b> via AST analysis and function extraction.</li>
+          <li>CLI + Streamlit web UI with a <b>0–10 readiness score</b>, execution-order validation, and Claude integration for clean refactors.</li>
+          <li>Multi-phase refactoring pipeline with config management and <b>25+ automated tests</b> covering the whole flow.</li>
+        </ul>
+        <div class="pj-stack"><span>Python</span><span>Click</span><span>Claude API</span><span>AST</span><span>Streamlit</span></div>
+        <div class="pj-links"><a class="btn" href="https://github.com/anjan-r-athreya/notebook2production" target="_blank">github <span class="arrow">↗</span></a></div>
+      </div>
+      <div class="pj-media">
+        <span class="mtag">SCREEN · STREAMLIT</span>
+        <img src="assets/nb2prod.jpeg" alt="nb2prod UI">
+      </div>
+    </article>
+
+    <!-- arXiv MCP -->
+    <article class="pj reveal">
+      <div class="pj-body">
+        <div class="num">03 — Python · MCP</div>
+        <h3>arXiv <em>MCP</em> server.</h3>
+        <span class="lang">Python · MCP · SQLite · ChromaDB</span>
+        <ul>
+          <li>Gives Claude + Cursor a persistent, semantically searchable <b>arXiv library</b> across <b>39k+ chars</b> of extracted PDF text.</li>
+          <li><b>15 tools</b> spanning the research workflow: import, fulltext search, PDF annotation extraction, cross-paper context.</li>
+          <li>Preprint→DOI tracking via Semantic Scholar + Crossref, dup detection, and KMeans topic clustering.</li>
+        </ul>
+        <div class="pj-stack"><span>Python</span><span>MCP</span><span>SQLite</span><span>ChromaDB</span><span>Semantic Scholar</span></div>
+        <div class="pj-links"><a class="btn" href="https://github.com/anjan-r-athreya/arXiv-mcp" target="_blank">github <span class="arrow">↗</span></a></div>
+      </div>
+      <div class="pj-media">
+        <span class="mtag">DEMO · CLAUDE CODE</span>
+        <img src="assets/arxiv-mcp.gif" alt="arXiv MCP demo" style="object-fit:contain;background:#05070a">
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────── SKILLS ───────────── -->
+<section id="skills" class="skills">
+  <div class="section-head reveal">
+    <h2>skills<em>.yaml</em></h2>
+    <div class="meta">
+      <div>CATEGORIES <b>05</b></div>
+      <div>ITEMS <b>28</b></div>
+    </div>
+  </div>
+
+  <div class="sk-grid reveal">
+    <div class="sk-col">
+      <h4>languages <span class="cnt">07</span></h4>
+      <ul><li>python</li><li>java</li><li>c</li><li>javascript</li><li>sql</li><li>swift / swiftui</li><li>html / css</li></ul>
+    </div>
+    <div class="sk-col">
+      <h4>frameworks <span class="cnt">06</span></h4>
+      <ul><li>flask</li><li>streamlit</li><li>hugging face</li><li>mapkit</li><li>corelocation</li><li>geojson</li></ul>
+    </div>
+    <div class="sk-col">
+      <h4>tools <span class="cnt">08</span></h4>
+      <ul><li>aws</li><li>git / github</li><li>rest apis</li><li>esri arcgis</li><li>pyenv</li><li>poetry</li><li>click</li><li>mcp</li></ul>
+    </div>
+    <div class="sk-col">
+      <h4>practices <span class="cnt">05</span></h4>
+      <ul><li>full-stack dev</li><li>automated testing</li><li>debugging</li><li>ci / cd</li><li>agile</li></ul>
+    </div>
+    <div class="sk-col" style="grid-column:1/-1">
+      <h4>ai toolchain <span class="cnt">02</span></h4>
+      <ul style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px 24px"><li>claude code</li><li>cursor</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── EDUCATION ───────────── -->
+<section id="education" class="education">
+  <div class="section-head reveal">
+    <h2><em>edu</em>cation.</h2>
+    <div class="meta">
+      <div>FILE <b>edu.md</b></div>
+      <div>EXPECTED <b>dec 2027</b></div>
+    </div>
+  </div>
+
+  <div class="edu-card reveal">
+    <div class="edu-hero">
+      <div class="uni">// stony brook university · ceas</div>
+      <h3>B.S. Computer Science <em>&</em> Applied Math + Statistics</h3>
+      <div class="deg">accelerated · double major · expected dec 2027</div>
+      <div class="meta">
+        <div><b>3.6</b> 1st-year gpa</div>
+        <div><b>800+</b> ai community</div>
+        <div><b>4:54</b> sf marathon</div>
+      </div>
+    </div>
+    <div class="edu-body">
+      <h4>coursework</h4>
+      <div class="edu-course">
+        <span>Data Structures</span><span>Algorithms</span><span>Prog. Languages</span>
+        <span>Systems Fundamentals</span><span>Applied Linear Algebra</span><span>Discrete Math</span>
+        <span>Computational Geometry</span><span>Graph Theory</span><span>Prob. & Stats</span><span>Calc III</span>
+      </div>
+      <h4>campus involvement</h4>
+      <p><b>AI Community @ SBU (800+).</b> PM directing 15+ workshops, guest speakers, $2k+ sponsorships. Built Q-Learning + DQN models to teach RL to 80+ peers.</p>
+      <p style="margin-top:12px"><b>Athletics & music.</b> SF Marathon finisher (4:54, Aug '25). Varsity wrestling, track, volleyball. Violin · regional and school orchestras.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── CONTACT ───────────── -->
+<section id="contact" class="contact">
+  <pre class="ascii">  ┌─────────────┐
+  │  say hi.    │
+  └─────────────┘
+   // open to new work
+   // summer 2027 + grad
+   // ml · full-stack · ios
+  </pre>
+  <div class="contact-inner reveal">
+    <div>
+      <h2>let's <em>build</em><br>something.</h2>
+      <p class="contact-sub">I'm always up for a good conversation — research, product, marathon training tips, or a recipe trade. Reach out via any of the channels on the right.</p>
+    </div>
+    <div class="contact-list">
+      <a href="mailto:anjan.r.athreya@gmail.com"><span class="k">email</span><span>anjan.r.athreya@gmail.com ↗</span></a>
+      <a href="https://www.linkedin.com/in/anjan-athreya" target="_blank"><span class="k">linkedin</span><span>/in/anjan-athreya ↗</span></a>
+      <a href="https://github.com/anjan-r-athreya" target="_blank"><span class="k">github</span><span>@anjan-r-athreya ↗</span></a>
+      <a href="tel:2037274972"><span class="k">phone</span><span>(203) 727-4972 ↗</span></a>
+      <a href="#hero"><span class="k">loc</span><span>fairfield, ct → stony brook, ny</span></a>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>© 2026 anjan athreya · all rights reserved</span>
+    <span>hand-built with care · view-source friendly</span>
+  </div>
+</section>
+
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="bg.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
