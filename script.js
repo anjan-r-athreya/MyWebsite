@@ -128,6 +128,8 @@
         var blob = $("#blob"), dot = $("#blobDot"), label = $("#blobLabel");
         if (!blob || !dot || !finePointer || reduced) return null;
 
+        document.documentElement.classList.add("has-blob");
+
         var mouse = { x: innerWidth / 2, y: innerHeight / 2 };
         var b = { x: mouse.x, y: mouse.y, w: 40, h: 40 };
         var d = { x: mouse.x, y: mouse.y };
@@ -229,28 +231,35 @@
 
     /* ─────────────────────────────  SPLIT TEXT  ─────────────────────────────
        Each character gets its own overflow-hidden box so the glyph can slide up
-       from behind the line. <br> and spacing survive the walk. */
+       from behind the line. Characters are inline-block, which would otherwise
+       let the browser break a line mid-word, so each word is wrapped in its own
+       nowrap box. <br> and spacing survive the walk. */
     function split(el) {
-        var out = [];
         var idx = 0;
+
+        function chars(word, into) {
+            var wrap = document.createElement("span");
+            wrap.className = "wd";
+            word.split("").forEach(function (c) {
+                var span = document.createElement("span");
+                span.className = "ch";
+                var inner = document.createElement("i");
+                inner.textContent = c;
+                inner.style.setProperty("--d", (idx * 16) + "ms");
+                idx++;
+                span.appendChild(inner);
+                wrap.appendChild(span);
+            });
+            into.appendChild(wrap);
+        }
 
         function walk(node, into) {
             Array.prototype.slice.call(node.childNodes).forEach(function (child) {
                 if (child.nodeType === 3) {
-                    child.textContent.split("").forEach(function (c) {
-                        if (c === " " || c === "\n") {
-                            into.appendChild(document.createTextNode(" "));
-                            return;
-                        }
-                        var span = document.createElement("span");
-                        span.className = "ch";
-                        var inner = document.createElement("i");
-                        inner.textContent = c;
-                        inner.style.setProperty("--d", (idx * 16) + "ms");
-                        idx++;
-                        span.appendChild(inner);
-                        into.appendChild(span);
-                        out.push(span);
+                    child.textContent.split(/(\s+)/).forEach(function (token) {
+                        if (!token) return;
+                        if (/^\s+$/.test(token)) into.appendChild(document.createTextNode(" "));
+                        else chars(token, into);
                     });
                 } else if (child.nodeName === "BR") {
                     into.appendChild(document.createElement("br"));
@@ -266,7 +275,6 @@
         walk(el, frag);
         el.textContent = "";
         el.appendChild(frag);
-        return out;
     }
 
     function reveals() {

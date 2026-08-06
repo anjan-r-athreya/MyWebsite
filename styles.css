@@ -88,10 +88,9 @@ a { color: inherit; text-decoration: none; }
     border-radius: 2px;
 }
 
-/* the cursor replaces the pointer on devices that have one */
-@media (hover: hover) and (pointer: fine) {
-    body, a, button { cursor: none; }
-}
+/* only hide the system pointer once the blob is actually running, so a
+   thrown module or a blocked script never leaves the page cursor-less */
+.has-blob, .has-blob a, .has-blob button { cursor: none; }
 
 /* ─────────────────────────────  PRIMITIVES  ───────────────────────────── */
 .wrap {
@@ -357,9 +356,11 @@ a { color: inherit; text-decoration: none; }
 .nav__cta { justify-self: end; height: 40px; padding: 0 20px; font-size: 14px;
             background: #E4DED7; color: #0F0E0D; }
 
+/* one-page site, so the section links go — but keep a way to reach him */
 @media (max-width: 860px) {
-    .nav__links, .nav__cta { display: none; }
-    .nav__inner { grid-template-columns: 1fr; justify-items: center; }
+    .nav__links { display: none; }
+    .nav__inner { grid-template-columns: 1fr auto; }
+    .nav__mark { justify-self: start; }
 }
 
 /* ═════════════════════════════  HERO  ═════════════════════════════ */
@@ -390,8 +391,13 @@ a { color: inherit; text-decoration: none; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(120% 78% at 50% 34%, transparent 0%, rgba(15,14,13,.42) 62%, rgba(15,14,13,.86) 100%),
-        linear-gradient(to bottom, rgba(15,14,13,.55) 0%, transparent 22%, transparent 52%, var(--bg) 97%);
+        radial-gradient(115% 72% at 50% 28%, rgba(15,14,13,.12) 0%, rgba(15,14,13,.52) 56%, rgba(15,14,13,.9) 100%),
+        linear-gradient(to bottom,
+            rgba(15,14,13,.62) 0%,
+            rgba(15,14,13,.26) 17%,
+            rgba(15,14,13,.52) 46%,   /* the headline band — the busiest part of the frame */
+            rgba(15,14,13,.84) 74%,
+            var(--bg) 98%);
 }
 .hero .grain { z-index: 1; }
 
@@ -901,14 +907,17 @@ a { color: inherit; text-decoration: none; }
     width: 100%; height: 100%;
     object-fit: cover;
     object-position: 50% 66%;
-    filter: brightness(.36) saturate(.6);
+    filter: brightness(.28) saturate(.5);
 }
+/* same read as the hero: the frame is atmosphere, never competition for the type */
 .cta::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(to bottom, var(--bg) 0%, rgba(15,14,13,.45) 40%, var(--bg) 100%);
+    background:
+        radial-gradient(90% 70% at 30% 70%, rgba(15,14,13,.5) 0%, rgba(15,14,13,.8) 100%),
+        linear-gradient(to bottom, var(--bg) 0%, rgba(15,14,13,.6) 34%, rgba(15,14,13,.7) 66%, var(--bg) 100%);
 }
 .cta__inner {
     position: relative;
@@ -995,7 +1004,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ═════════════════════════════  MOTION PRIMITIVES  ═════════════════════════════ */
 
-/* per-character mask reveal, used on every section headline */
+/* per-character mask reveal, used on every section headline.
+   .wd keeps a word together — inline-block characters would otherwise let a
+   line break land in the middle of one */
+.wd { display: inline-block; white-space: nowrap; }
 .ch {
     display: inline-block;
     overflow: hidden;
@@ -1029,12 +1041,10 @@ a { color: inherit; text-decoration: none; }
         transition-duration: .001ms !important;
         scroll-behavior: auto !important;
     }
-    [data-rise] { opacity: 1; transform: none; }
+    .js [data-rise] { opacity: 1; transform: none; }
     .ch > i { transform: none; }
     .manifesto__text .w { opacity: 1; }
     .blob, .blob-dot { display: none; }
-    @media (hover: hover) and (pointer: fine) {
-        body, a, button { cursor: auto; }
-    }
+    .has-blob, .has-blob a, .has-blob button { cursor: auto; }
     .hero__scroll i { animation: none; }
 }
