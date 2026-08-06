@@ -353,8 +353,38 @@ a { color: inherit; text-decoration: none; }
 }
 .nav__mark svg { width: 19px; height: 19px; fill: currentColor; }
 
-.nav__cta { justify-self: end; height: 40px; padding: 0 20px; font-size: 14px;
+.nav__actions { display: flex; align-items: center; gap: 10px; justify-self: end; }
+
+.nav__cta { height: 40px; padding: 0 20px; font-size: 14px;
             background: #E4DED7; color: #0F0E0D; }
+
+/* icon-only pill — same weight as pill--ghost, round instead of stadium so it
+   reads as a utility action rather than a call to action */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; height: 40px;
+    flex: none;
+    border-radius: 50%;
+    border: 1px solid rgba(228, 222, 215, .16);
+    color: #E4DED7;
+    background: rgba(228, 222, 215, .06);
+    transition: transform .5s var(--slow), background-color .35s var(--ease), border-color .35s var(--ease);
+}
+.icon-btn svg {
+    width: 16px; height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.icon-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(228, 222, 215, .32);
+    background: rgba(228, 222, 215, .12);
+}
 
 /* one-page site, so the section links go — but keep a way to reach him */
 @media (max-width: 860px) {

@@ -12,11 +12,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjan Athreya — CS &amp; Applied Mathematics</title>
-    <meta name="description" content="Anjan Athreya builds machine learning systems and developer tools. CS &amp; Applied Mathematics at Stony Brook University.">
+    <meta name="description" content="Anjan Athreya builds full-stack systems, machine learning research, and developer tools. CS &amp; Applied Mathematics at Stony Brook University.">
     <meta name="theme-color" content="#0F0E0D">
 
     <meta property="og:title" content="Anjan Athreya — CS &amp; Applied Mathematics">
-    <meta property="og:description" content="Machine learning systems and developer tools. Stony Brook University, class of 2027.">
+    <meta property="og:description" content="Full-stack systems, machine learning research, and developer tools. Stony Brook University, class of 2027.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="sbu-campus.jpg">
 
@@ -58,7 +58,12 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3 12l9 9.5 9-9.5-9-9.5Zm0 4.2 5 5.3-5 5.3-5-5.3 5-5.3Z"/></svg>
             <span>Anjan Athreya</span>
         </a>
-        <a href="#contact" class="pill pill--light nav__cta" data-blob data-tooltip="Let's talk">Get in touch</a>
+        <div class="nav__actions">
+            <a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" class="icon-btn nav__resume" data-blob data-tooltip="Download résumé" aria-label="Download résumé (PDF)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            </a>
+            <a href="#contact" class="pill pill--light nav__cta" data-blob data-tooltip="Let's talk">Get in touch</a>
+        </div>
     </nav>
 </header>
 
@@ -79,7 +84,7 @@
         </h1>
 
         <p class="hero__sub" data-rise>
-            Machine learning research, iOS, and developer tooling &mdash; shipped to real users,
+            Full-stack systems, machine learning research, and developer tooling &mdash; shipped to real users,
             measured honestly, and rebuilt when the numbers say so.
         </p>
 
@@ -111,7 +116,6 @@
             <span>North Atlantic Industries</span><i aria-hidden="true"></i>
             <span>LightBox EDR</span><i aria-hidden="true"></i>
             <span>AI Community @ SBU</span><i aria-hidden="true"></i>
-            <span>Lavner Education</span><i aria-hidden="true"></i>
         </div>
     </div>
 </section>
@@ -133,71 +137,53 @@
         <header class="section__head">
             <div>
                 <p class="eyebrow"><i></i>Experience</p>
-                <h2 class="section__title" data-split>Six roles, one throughline.</h2>
+                <h2 class="section__title" data-split>Four roles, one throughline.</h2>
             </div>
             <p class="section__note" data-rise>
-                Research, product, and teaching. Every one of them came down to explaining
-                a hard thing clearly and then making it run.
+                Research, enterprise engineering, and the internship that started it.
+                Every one of them came down to understanding a system well enough to change it safely.
             </p>
         </header>
 
         <ol class="roles">
             <li class="role role--next" data-rise>
-                <div class="role__when"><span class="mono">Summer 2026</span><em>Incoming</em></div>
-                <div class="role__what">
-                    <h3>Full Stack Software Engineer</h3>
-                    <p class="role__org">North Atlantic Industries &middot; Bohemia, NY</p>
-                </div>
-                <img class="role__logo" src="logos/nai.webp" alt="North Atlantic Industries" loading="lazy">
-            </li>
-
-            <li class="role role--next" data-rise>
                 <div class="role__when"><span class="mono">Fall 2026</span><em>Incoming</em></div>
                 <div class="role__what">
-                    <h3>Customer Success Engineer</h3>
+                    <h3>AI Solutions Engineering Co-op</h3>
                     <p class="role__org">IBM &middot; San Francisco, CA</p>
+                    <p class="role__desc">Building Python data-preparation pipelines, LLM tooling, and cloud automation to drive enterprise AI adoption.</p>
                 </div>
                 <img class="role__logo" src="logos/ibm.png" alt="IBM" loading="lazy">
             </li>
 
             <li class="role" data-rise>
-                <div class="role__when"><span class="mono">Dec 2025 &mdash; now</span><em>Research</em></div>
+                <div class="role__when"><span class="mono">May 2026 &mdash; now</span><em>Internship</em></div>
                 <div class="role__what">
-                    <h3>Machine Learning Research Assistant</h3>
-                    <p class="role__org">Stony Brook University, College of Engineering</p>
-                    <p class="role__desc">Applying deep learning to problems in the engineering college &mdash; model design, training runs, and the unglamorous work of making results reproducible.</p>
+                    <h3>Full Stack Software Engineer Intern</h3>
+                    <p class="role__org">North Atlantic Industries &middot; Bohemia, NY</p>
+                    <p class="role__desc">Own the full lifecycle of a C#/.NET and Angular platform that replaced NAI's manual PLM process &mdash; shipped V1 to production in eight weeks, now used by 200+ employees across 10+ departments. Built the submission-to-PLM-to-Salesforce pipeline, an LLM-drafted special-requirements feature, and ported a two-year-stale parts-inventory system into a new .NET microservice.</p>
+                </div>
+                <img class="role__logo" src="logos/nai.webp" alt="North Atlantic Industries" loading="lazy">
+            </li>
+
+            <li class="role" data-rise>
+                <div class="role__when"><span class="mono">Nov 2025 &mdash; now</span><em>Research</em></div>
+                <div class="role__what">
+                    <h3>Software Engineer Research Assistant</h3>
+                    <p class="role__org">SBU College of Engineering &middot; Prof. Shubham Jain</p>
+                    <p class="role__desc">Building a dual-platform iOS/watchOS app that fuses 18 Apple Watch and AirPods sensor channels into an on-device pipeline, then adapting a rep-detection algorithm from arm-mounted IMUs to the wrist &mdash; quaternion projection, Savitzky&ndash;Golay smoothing, and a per-user PCA calibration that learns each lifter's motion axis.</p>
                 </div>
                 <img class="role__logo" src="logos/stonybrookceas.jpeg" alt="Stony Brook University" loading="lazy">
-            </li>
-
-            <li class="role" data-rise>
-                <div class="role__when"><span class="mono">Mar 2025 &mdash; now</span><em>Leadership</em></div>
-                <div class="role__what">
-                    <h3>Project Manager</h3>
-                    <p class="role__org">AI Community @ SBU &middot; 800+ members</p>
-                    <p class="role__desc">Directed 15+ workshops and guest sessions, secured $2K+ in sponsorships, and built Q-Learning and DQN models to teach reinforcement learning to 80+ peers.</p>
-                </div>
-                <img class="role__logo" src="logos/AIC.jpeg" alt="AI Community at SBU" loading="lazy">
-            </li>
-
-            <li class="role" data-rise>
-                <div class="role__when"><span class="mono">Jun &mdash; Aug 2025</span><em>Teaching</em></div>
-                <div class="role__what">
-                    <h3>STEM Instructor</h3>
-                    <p class="role__org">Lavner Education</p>
-                    <p class="role__desc">Taught coding, robotics, and game development to K&ndash;12 students &mdash; the fastest way to find out whether you actually understand something.</p>
-                </div>
-                <img class="role__logo" src="logos/lavner_education.jpeg" alt="Lavner Education" loading="lazy">
             </li>
 
             <li class="role" data-rise>
                 <div class="role__when"><span class="mono">May &mdash; Jun 2024</span><em>Internship</em></div>
                 <div class="role__what">
                     <h3>Software Development Intern</h3>
-                    <p class="role__org">LightBox EDR</p>
-                    <p class="role__desc">Built ETL pipelines and geospatial tooling in Python and ArcGIS to process environmental site data.</p>
+                    <p class="role__org">LightBox Environmental Data Resources &middot; Shelton, CT</p>
+                    <p class="role__desc">Automated ETL pipelines cleansing geospatial tax parcel data across all 50 states, cutting preprocessing time 25%, and built GeoJSON visualizations on the LightBox REST API and ESRI ArcGIS that cut manual integration effort 30%.</p>
                 </div>
-                <img class="role__logo" src="logos/lightbox.jpg" alt="LightBox EDR" loading="lazy">
+                <img class="role__logo" src="logos/lightbox.jpg" alt="LightBox Environmental Data Resources" loading="lazy">
             </li>
         </ol>
     </div>
@@ -226,9 +212,9 @@
             </article>
             <article class="stat" data-rise data-rise-delay="90">
                 <div class="stat__body">
-                    <p class="stat__num">800+</p>
+                    <p class="stat__num">700+</p>
                     <h3>Members reached</h3>
-                    <p>AI Community @ SBU. Fifteen workshops, $2K+ in sponsorship, and an RL curriculum taught to 80+ peers.</p>
+                    <p>AI Community @ SBU. Hands-on machine learning workshops for 80+ peers, as Project Manager.</p>
                 </div>
             </article>
             <article class="stat" data-rise data-rise-delay="180">
@@ -254,64 +240,14 @@
                 <h2 class="section__title" data-split>Three things I shipped.</h2>
             </div>
             <p class="section__note" data-rise>
-                One iOS app I trained a marathon on, one tool that cleans up after data scientists,
-                and one server that gives Claude a research library.
+                One server that gives coding agents a research library, one iOS app I trained
+                a marathon on, and one tool that cleans up after data scientists.
             </p>
         </header>
 
         <article class="project" data-rise>
             <div class="project__head">
                 <span class="mono project__idx">01</span>
-                <h3>Circular</h3>
-                <span class="mono project__lang">Swift &middot; iOS</span>
-                <a href="https://github.com/anjan-r-athreya/Circular" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
-                    GitHub
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
-                </a>
-            </div>
-            <div class="project__media project__media--phone">
-                <iframe src="https://www.youtube.com/embed/z8spHShT19k" title="Circular app demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="project__text">
-                <ul>
-                    <li>Generates running routes to a target distance within &plusmn;0.1 mile, using MapKit, CoreLocation and Mapbox under a two-edges-per-waypoint geospatial constraint.</li>
-                    <li>Cut API load 50% and route-generation attempts 40% by rewriting the search scaling, with no loss in accuracy.</li>
-                    <li>Grew a 100+ user beta from 10,000+ views across YouTube and Instagram, and shipped changes from what the first ten testers actually complained about.</li>
-                </ul>
-                <div class="tags">
-                    <span class="tag">Swift</span><span class="tag">MapKit</span><span class="tag">CoreLocation</span><span class="tag">Mapbox</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="project" data-rise>
-            <div class="project__head">
-                <span class="mono project__idx">02</span>
-                <h3>nb2prod</h3>
-                <span class="mono project__lang">Python</span>
-                <a href="https://github.com/anjan-r-athreya/notebook2production" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
-                    GitHub
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
-                </a>
-            </div>
-            <div class="project__media">
-                <img src="logos/nb2prod-screenshot.jpeg" alt="nb2prod converting a Jupyter notebook into a structured Python project" loading="lazy">
-            </div>
-            <div class="project__text">
-                <ul>
-                    <li>Turns a messy Jupyter notebook into a production-ready Python project, dropping deployment from hours to minutes.</li>
-                    <li>Scores production readiness 0&ndash;10, validates execution order, and uses Claude to generate documented, error-handled code &mdash; available as both a CLI and a Streamlit app.</li>
-                    <li>Multi-phase refactoring pipeline built on AST analysis plus LLM enhancement, covered by 25+ automated tests.</li>
-                </ul>
-                <div class="tags">
-                    <span class="tag">Python</span><span class="tag">Click</span><span class="tag">Claude API</span><span class="tag">Streamlit</span><span class="tag">AST</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="project" data-rise>
-            <div class="project__head">
-                <span class="mono project__idx">03</span>
                 <h3>arXiv MCP Server</h3>
                 <span class="mono project__lang">Python &middot; MCP</span>
                 <a href="https://github.com/anjan-r-athreya/arXiv-mcp" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
@@ -324,12 +260,61 @@
             </div>
             <div class="project__text">
                 <ul>
-                    <li>Gives Claude and Cursor a persistent, semantically searchable arXiv library instead of a fresh context every session.</li>
-                    <li>Dual-storage architecture &mdash; SQLite plus ChromaDB with local embeddings &mdash; searching across 39K+ characters of extracted PDF text.</li>
-                    <li>Fifteen tools covering the full research loop: import, fulltext search, annotation extraction, preprint-to-DOI tracking via Semantic Scholar and Crossref, duplicate detection, and KMeans topic clustering.</li>
+                    <li>Open-source MCP server (15 tools) giving coding agents like Claude Code retrieval-augmented search over research papers, via hybrid SQL (SQLite) and vector (ChromaDB) storage.</li>
+                    <li>Full-text search, PDF annotation extraction, and duplicate detection across the whole library.</li>
+                    <li>DOI resolution against Semantic Scholar and Crossref plus KMeans topic clustering, so a preprint and its published version resolve to one record.</li>
                 </ul>
                 <div class="tags">
-                    <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">SQLite</span><span class="tag">ChromaDB</span><span class="tag">Semantic Scholar</span>
+                    <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">SQLite</span><span class="tag">ChromaDB</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project" data-rise>
+            <div class="project__head">
+                <span class="mono project__idx">02</span>
+                <h3>Circular</h3>
+                <span class="mono project__lang">Swift &middot; iOS</span>
+                <a href="https://github.com/anjan-r-athreya/Circular" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
+                    GitHub
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
+                </a>
+            </div>
+            <div class="project__media project__media--phone">
+                <iframe src="https://www.youtube.com/embed/z8spHShT19k" title="Circular app demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project__text">
+                <ul>
+                    <li>Engineered dynamic route generation with geodesic distance algorithms (&plusmn;0.1 mile) and turn-by-turn pathing, using MapKit, CoreLocation and Mapbox.</li>
+                    <li>Cut API calls 50% and route-generation attempts 40% via tile and segment caching, with no loss in accuracy.</li>
+                    <li>Shipped to 100+ beta users with routing-quality and ETA telemetry feeding every subsequent release.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Swift</span><span class="tag">MapKit</span><span class="tag">CoreLocation</span><span class="tag">Mapbox</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project" data-rise>
+            <div class="project__head">
+                <span class="mono project__idx">03</span>
+                <h3>nb2prod</h3>
+                <span class="mono project__lang">Python</span>
+                <a href="https://github.com/anjan-r-athreya/notebook2production" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
+                    GitHub
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
+                </a>
+            </div>
+            <div class="project__media">
+                <img src="logos/nb2prod-screenshot.jpeg" alt="nb2prod converting a Jupyter notebook into a structured Python project" loading="lazy">
+            </div>
+            <div class="project__text">
+                <ul>
+                    <li>Built a CLI and web tool converting Jupyter notebooks into production-ready Python packages via AST analysis and automated refactoring, cutting deployment from hours to minutes.</li>
+                    <li>Generated test suites with 100% coverage (25+ tests), plus readiness scoring and execution-order validation.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">AST</span><span class="tag">Streamlit</span><span class="tag">CLI</span><span class="tag">Poetry</span>
                 </div>
             </div>
         </article>
@@ -345,7 +330,7 @@
                 <h2 class="section__title" data-split>What I reach for.</h2>
             </div>
             <p class="section__note" data-rise>
-                Listed by how often I actually open them, not by how they look on a resume.
+                Everything above, grouped by what it's actually for.
             </p>
         </header>
 
@@ -353,39 +338,47 @@
             <div class="stack__row" data-rise>
                 <h3 class="mono">Languages</h3>
                 <div class="chips">
-                    <span class="chip">Python</span><span class="chip">Swift</span><span class="chip">Java</span>
-                    <span class="chip">C</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
-                    <span class="chip">HTML &amp; CSS</span>
+                    <span class="chip">TypeScript / JavaScript</span><span class="chip">Python</span><span class="chip">C#</span>
+                    <span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Swift</span>
+                    <span class="chip">C</span><span class="chip">HTML &amp; CSS</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
-                <h3 class="mono">ML &amp; data</h3>
+                <h3 class="mono">Frameworks &amp; libraries</h3>
                 <div class="chips">
-                    <span class="chip">Hugging Face</span><span class="chip">ChromaDB</span>
-                    <span class="chip">Q-Learning</span><span class="chip">DQN</span><span class="chip">KMeans</span>
+                    <span class="chip">Angular</span><span class="chip">React</span><span class="chip">.NET</span>
+                    <span class="chip">EF Core</span><span class="chip">Flask</span><span class="chip">SwiftUI</span>
+                    <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">scikit-learn</span>
+                    <span class="chip">Hugging Face</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
-                <h3 class="mono">Frameworks</h3>
+                <h3 class="mono">Data &amp; systems</h3>
                 <div class="chips">
-                    <span class="chip">SwiftUI</span><span class="chip">MapKit</span><span class="chip">CoreLocation</span>
-                    <span class="chip">Flask</span><span class="chip">Streamlit</span><span class="chip">Click</span>
-                    <span class="chip">MCP</span>
+                    <span class="chip">SQL Server</span><span class="chip">ETL pipelines</span><span class="chip">Distributed systems</span>
+                    <span class="chip">REST APIs</span><span class="chip">ChromaDB</span><span class="chip">AWS</span>
+                    <span class="chip">Observability</span><span class="chip">CI/CD</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
-                <h3 class="mono">Platforms &amp; tools</h3>
+                <h3 class="mono">AI/ML</h3>
                 <div class="chips">
-                    <span class="chip">AWS</span><span class="chip">Git</span><span class="chip">ESRI ArcGIS</span>
-                    <span class="chip">GeoJSON</span><span class="chip">Poetry</span><span class="chip">Pyenv</span>
-                    <span class="chip">Claude Code</span><span class="chip">Cursor</span>
+                    <span class="chip">RAG</span><span class="chip">LLM tooling</span><span class="chip">Prompt engineering</span>
+                    <span class="chip">Embeddings</span><span class="chip">Information retrieval</span><span class="chip">MCP</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
-                <h3 class="mono">Practices</h3>
+                <h3 class="mono">Testing &amp; practices</h3>
                 <div class="chips">
-                    <span class="chip">Automated testing</span><span class="chip">CI/CD</span>
-                    <span class="chip">REST API design</span><span class="chip">Agile</span>
+                    <span class="chip">NUnit</span><span class="chip">Unit &amp; integration testing</span>
+                    <span class="chip">Accessibility</span><span class="chip">Code review</span><span class="chip">Agile</span>
+                </div>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Concepts</h3>
+                <div class="chips">
+                    <span class="chip">Data structures</span><span class="chip">Algorithms</span><span class="chip">OOP</span>
+                    <span class="chip">Computational geometry</span><span class="chip">Debugging</span>
                 </div>
             </div>
         </div>
@@ -407,18 +400,19 @@
                     <p class="edu__deg">B.S. Computer Science (accelerated) &amp; Applied Mathematics and Statistics</p>
                     <dl class="edu__facts">
                         <div><dt>Expected</dt><dd class="mono">Dec 2027</dd></div>
-                        <div><dt>First-year GPA</dt><dd class="mono">3.60</dd></div>
+                        <div><dt>GPA</dt><dd class="mono">3.53</dd></div>
+                        <div><dt>Course load</dt><dd class="mono">~17 cr / sem</dd></div>
                         <div><dt>College</dt><dd>Engineering &amp; Applied Sciences</dd></div>
                     </dl>
                 </div>
                 <div class="edu__grid">
                     <div class="edu__card">
                         <h3>Coursework</h3>
-                        <p>Data Structures &amp; Algorithms &middot; Principles of Programming Languages &middot; Systems Fundamentals &middot; Applied Linear Algebra &middot; Discrete Mathematics &middot; Computational Geometry &middot; Graph Theory &amp; Combinatorics &middot; Probability &amp; Statistics &middot; Calculus III</p>
+                        <p>Analysis of Algorithms &middot; Data Structures &middot; Systems Fundamentals &middot; Programming Languages &middot; Software Development &middot; Computational Geometry &middot; Probability &amp; Statistics &middot; Linear Algebra</p>
                     </div>
                     <div class="edu__card">
                         <h3>Beyond the transcript</h3>
-                        <p>Project Manager of an 800-member AI community. San Francisco Marathon finisher. Varsity wrestling, track and volleyball. Violinist in regional and school orchestras.</p>
+                        <p>Project Manager of a 700-member AI community, running hands-on ML workshops for 80+ peers. San Francisco Marathon finisher. Varsity wrestling, track and volleyball. Violinist in regional and school orchestras.</p>
                     </div>
                 </div>
             </div>
@@ -467,8 +461,9 @@
             <p>Open to Summer 2027 internships in ML, infrastructure, and developer tools &mdash; and always happy to talk about any of the above.</p>
             <div class="cta__links">
                 <a href="mailto:anjan.r.athreya@gmail.com" class="pill pill--light" data-blob data-tooltip="Copy that">Email me</a>
-                <a href="https://www.linkedin.com/in/anjan-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>LinkedIn</a>
+                <a href="https://www.linkedin.com/in/anjan-r-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>LinkedIn</a>
                 <a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>GitHub</a>
+                <a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" class="pill pill--ghost" data-blob data-tooltip="1-page PDF">Résumé</a>
             </div>
         </div>
     </div>
@@ -496,7 +491,8 @@
             <div>
                 <dt>Elsewhere</dt>
                 <dd><a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" data-blob>GitHub</a></dd>
-                <dd><a href="https://www.linkedin.com/in/anjan-athreya" target="_blank" rel="noopener" data-blob>LinkedIn</a></dd>
+                <dd><a href="https://www.linkedin.com/in/anjan-r-athreya" target="_blank" rel="noopener" data-blob>LinkedIn</a></dd>
+                <dd><a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" data-blob>Résumé (PDF)</a></dd>
             </div>
             <div>
                 <dt>This page</dt>
