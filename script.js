@@ -303,11 +303,14 @@
 
         var text = el.textContent.replace(/\s+/g, " ").trim();
         el.textContent = "";
+        // the gap lives between the boxes, not inside them — an inline-block
+        // eats a trailing space and the sentence closes up
         var spans = text.split(" ").map(function (w, i, arr) {
             var s = document.createElement("span");
             s.className = "w";
-            s.textContent = w + (i < arr.length - 1 ? " " : "");
+            s.textContent = w;
             el.appendChild(s);
+            if (i < arr.length - 1) el.appendChild(document.createTextNode(" "));
             return s;
         });
 
