@@ -11,766 +11,513 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjan Athreya | Portfolio</title>
+    <title>Anjan Athreya — CS &amp; Applied Mathematics</title>
+    <meta name="description" content="Anjan Athreya builds machine learning systems and developer tools. CS &amp; Applied Mathematics at Stony Brook University.">
+    <meta name="theme-color" content="#0F0E0D">
+
+    <meta property="og:title" content="Anjan Athreya — CS &amp; Applied Mathematics">
+    <meta property="og:description" content="Machine learning systems and developer tools. Stony Brook University, class of 2027.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="sbu-campus.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">AA</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#aboutme">More About Me</a></li>
-                <li><a href="#timeline">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+<!-- ─────────────────────────────  PRELOADER  ───────────────────────────── -->
+<div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__words">
+        <span class="preloader__word">Build</span>
+        <span class="preloader__word">Measure</span>
+        <span class="preloader__word">Ship</span>
+        <span class="preloader__word">Anjan Athreya</span>
+    </div>
+    <div class="preloader__bar"><i></i></div>
+</div>
+
+<!-- ─────────────────────────────  CURSOR  ───────────────────────────── -->
+<div class="blob" id="blob" aria-hidden="true"><span class="blob__label" id="blobLabel"></span></div>
+<div class="blob-dot" id="blobDot" aria-hidden="true"></div>
+
+<div class="scroll-rail" aria-hidden="true"><i id="scrollRail"></i></div>
+
+<!-- ─────────────────────────────  NAV  ───────────────────────────── -->
+<header class="nav" id="nav">
+    <nav class="nav__inner">
+        <ul class="nav__links">
+            <li><a href="#work" data-blob>Work</a></li>
+            <li><a href="#projects" data-blob>Projects</a></li>
+            <li><a href="#stack" data-blob>Stack</a></li>
+            <li><a href="#life" data-blob>Life</a></li>
+        </ul>
+        <a href="#top" class="nav__mark" data-blob data-tooltip="Back to top">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3 12l9 9.5 9-9.5-9-9.5Zm0 4.2 5 5.3-5 5.3-5-5.3 5-5.3Z"/></svg>
+            <span>Anjan Athreya</span>
+        </a>
+        <a href="#contact" class="pill pill--light nav__cta" data-blob data-tooltip="Let's talk">Get in touch</a>
     </nav>
+</header>
 
-    <!-- Hero / Intro Section -->
-    <section id="hero" class="hero">
-        <div class="floating-bg" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="hero-profile">
-                <img src="pfp-gray.jpg" alt="Anjan Athreya" class="hero-profile-img">
-            </div>
-            <div class="hero-text">
-                <p class="hero-greeting">Hi, I'm</p>
-                <h1 class="hero-name">Anjan Athreya</h1>
-                <p class="hero-title">CS & Applied Mathematics @ Stony Brook University</p>
-                <p class="hero-description">
-                    Passionate about leveraging AI, machine learning, deep learning, and cloud
-                    technologies to build scalable, intelligent systems. My goal is to contribute
-                    to impactful projects that push the boundaries of AI-driven solutions.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#timeline" class="btn btn-secondary">View Experience</a>
-                </div>
-                <div class="hero-links">
-                    <a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/anjan-athreya" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    <a href="mailto:anjan.r.athreya@gmail.com" aria-label="Email">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <div class="card-header">
-                        <span class="card-dot"></span>
-                        <span class="card-dot"></span>
-                        <span class="card-dot"></span>
-                    </div>
-                    <div class="card-content">
-                        <code>
-                            <span class="code-keyword">const</span> anjan = {<br>
-                            &nbsp;&nbsp;role: <span class="code-string">"ML Researcher"</span>,<br>
-                            &nbsp;&nbsp;interests: [<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"AI/ML"</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Deep Learning"</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Cloud Tech"</span><br>
-                            &nbsp;&nbsp;],<br>
-                            &nbsp;&nbsp;building: <span class="code-string">"Circular"</span>,<br>
-                            &nbsp;&nbsp;passion: <span class="code-string">"Mathematics"</span><br>
-                            };
-                        </code>
-                    </div>
-                </div>
-            </div>
+<main id="top">
+
+<!-- ─────────────────────────────  HERO  ───────────────────────────── -->
+<section class="hero">
+    <div class="hero__photo" aria-hidden="true">
+        <img src="sbu-campus.jpg" alt="" id="heroImg" fetchpriority="high">
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="hero__body">
+        <p class="eyebrow eyebrow--live"><i></i>CS &amp; Applied Mathematics, Stony Brook &rsquo;27</p>
+
+        <h1 class="hero__title" data-split>
+            I build systems that<br>learn and hold up.
+        </h1>
+
+        <p class="hero__sub" data-rise>
+            Machine learning research, iOS, and developer tooling &mdash; shipped to real users,
+            measured honestly, and rebuilt when the numbers say so.
+        </p>
+
+        <div class="hero__cta" data-rise data-rise-delay="120">
+            <a href="#projects" class="pill pill--light" data-blob data-tooltip="Three things I shipped">See the work</a>
+            <a href="#contact" class="pill pill--ghost" data-blob>Get in touch</a>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow"></div>
+
+        <div class="hero__meta" data-rise data-rise-delay="220">
+            <span>Fairfield, Connecticut</span>
+            <span aria-hidden="true">&middot;</span>
+            <span>Open to Summer 2027 roles</span>
         </div>
-    </section>
+    </div>
 
-    <!-- More About Me Section -->
-    <section id="aboutme" class="about-section">
-        <div class="floating-bg" aria-hidden="true"></div>
-        <div class="container">
-            <h2 class="section-title">More About Me</h2>
-            <p class="section-subtitle">A glimpse into my life beyond code</p>
+    <a href="#affil" class="hero__scroll" data-blob aria-label="Scroll down">
+        <span>Scroll</span>
+        <i></i>
+    </a>
+</section>
 
-            <div class="carousel">
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/one.png" alt="Slide 1">
-                            <div class="slide-caption"><p>My dorm - the things I value and love. Discipline (Ali, Schwarzenegger, Balboa, A made bed), Perseverance (Naruto, SF Marathon), Family (My brothers) </p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/two.png" alt="Slide 2">
-                            <div class="slide-caption"><p>Learning, Teaching - I spread my knowledge of and passion for AI via my role as Project Manager of AIC @ SBU</p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/three.png" alt="Slide 3">
-                            <div class="slide-caption"><p>I love creating bonds through food, my recent endeavor. It's important for me to connect with my peers to collaborate well</p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/four.png" alt="Slide 4">
-                            <div class="slide-caption"><p>Nature clears my mind to think more productively and problem solve effectively</p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/five.png" alt="Slide 5">
-                            <div class="slide-caption"><p>My older brothers. Arjun inspired my passion for CS/Math and is my built-in mentor, Ashwath taught me to care deeply and inspired my academic work ethics</p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/six.png" alt="Slide 6">
-                            <div class="slide-caption"><p>The best experiences come from spending time with friends</p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/eight.png" alt="Slide 7">
-                            <div class="slide-caption"><p>Everyday I fight my genetic condition (PCD) by means of running. Completing a marathon is a testament to my commitment despite predetermined setbacks</p></div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="CarouselSlides/nine.png" alt="Slide 8">
-                            <div class="slide-caption"><p>Mayaa, my little sister who has taught me the importance of staying present and taking breaks. She gives me new energy</p></div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="carousel-nav carousel-prev" aria-label="Previous">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </button>
-                <button class="carousel-nav carousel-next" aria-label="Next">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                </button>
-
-                <div class="carousel-dots">
-                    <span class="carousel-dot active"></span>
-                    <span class="carousel-dot"></span>
-                    <span class="carousel-dot"></span>
-                    <span class="carousel-dot"></span>
-                    <span class="carousel-dot"></span>
-                    <span class="carousel-dot"></span>
-                    <span class="carousel-dot"></span>
-                    <span class="carousel-dot"></span>
-                </div>
-            </div>
+<!-- ─────────────────────────────  AFFILIATIONS  ───────────────────────────── -->
+<section class="affil" id="affil">
+    <p class="affil__label">Built, researched and taught at</p>
+    <div class="marquee" data-marquee>
+        <div class="marquee__track" data-marquee-track>
+            <span>Stony Brook University</span><i aria-hidden="true"></i>
+            <span>IBM</span><i aria-hidden="true"></i>
+            <span>North Atlantic Industries</span><i aria-hidden="true"></i>
+            <span>LightBox EDR</span><i aria-hidden="true"></i>
+            <span>AI Community @ SBU</span><i aria-hidden="true"></i>
+            <span>Lavner Education</span><i aria-hidden="true"></i>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Timeline Section -->
-    <section id="timeline" class="timeline-section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <p class="section-subtitle">My journey in tech and research</p>
+<!-- ─────────────────────────────  MANIFESTO  ───────────────────────────── -->
+<section class="manifesto">
+    <p class="manifesto__text" data-words>
+        Most student projects die at the demo.
+        They work once, on one machine, for one person.
+        I care about the part that comes after &mdash; the tests, the latency, the user
+        who opens it on a Tuesday and expects it to work.
+        That is the only part that counts.
+    </p>
+</section>
 
-            <div class="timeline-horizontal">
-                <div class="timeline-h-item">
-                    <div class="timeline-h-date">May - Jul 2024</div>
-                    <div class="timeline-h-marker"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge internship">Internship</span>
-                        <h3>Software Dev Intern</h3>
-                        <h4>LightBox EDR</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item">
-                    <div class="timeline-h-date">Aug 2024</div>
-                    <div class="timeline-h-marker"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge education">Education</span>
-                        <h3>Started at SBU</h3>
-                        <h4>Computer Science</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item">
-                    <div class="timeline-h-date">Mar 2025 - Present</div>
-                    <div class="timeline-h-marker"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge leadership">Leadership</span>
-                        <h3>Project Manager</h3>
-                        <h4>AI Community @ SBU</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item">
-                    <div class="timeline-h-date">Jun - Aug 2025</div>
-                    <div class="timeline-h-marker"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge teaching">Teaching</span>
-                        <h3>STEM Instructor</h3>
-                        <h4>Lavner Education</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item">
-                    <div class="timeline-h-date">Jan 2025</div>
-                    <div class="timeline-h-marker"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge education">Education</span>
-                        <h3>Applied Math and Statistics Double Major</h3>
-                        <h4>Stony Brook University</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item">
-                    <div class="timeline-h-date">Dec 2025 - Present</div>
-                    <div class="timeline-h-marker"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge research">Research</span>
-                        <h3>Machine Learning Research Assistant</h3>
-                        <h4>Stony Brook University</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item timeline-h-current">
-                    <div class="timeline-h-date">Now</div>
-                    <div class="timeline-h-marker marker-current"></div>
-                    <div class="timeline-current-label">Anjan is here</div>
-                </div>
-
-                <div class="timeline-h-item timeline-h-future">
-                    <div class="timeline-h-date">Summer 2026</div>
-                    <div class="timeline-h-marker marker-future"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge internship">Incoming</span>
-                        <h3>Full Stack SWE</h3>
-                        <h4>North Atlantic Industries</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item timeline-h-future">
-                    <div class="timeline-h-date">Fall 2026</div>
-                    <div class="timeline-h-marker marker-future"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge internship">Incoming</span>
-                        <h3>Customer Success Engineer</h3>
-                        <h4>IBM</h4>
-                    </div>
-                </div>
-
-                <div class="timeline-h-item timeline-h-future">
-                    <div class="timeline-h-date">Dec 2027</div>
-                    <div class="timeline-h-marker marker-future"></div>
-                    <div class="timeline-h-content">
-                        <span class="timeline-badge graduation">Graduation</span>
-                        <h3>Expected B.S.</h3>
-                        <h4>CS & AMS @ Stony Brook</h4>
-                    </div>
-                </div>
+<!-- ─────────────────────────────  WORK  ───────────────────────────── -->
+<section class="section" id="work">
+    <div class="wrap">
+        <header class="section__head">
+            <div>
+                <p class="eyebrow"><i></i>Experience</p>
+                <h2 class="section__title" data-split>Six roles, one throughline.</h2>
             </div>
+            <p class="section__note" data-rise>
+                Research, product, and teaching. Every one of them came down to explaining
+                a hard thing clearly and then making it run.
+            </p>
+        </header>
 
-            <!-- Experience Details Cards -->
-            <div class="experience-grid">
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <img src="logos/nai.webp" alt="North Atlantic Industries" class="exp-logo">
-                        <div class="exp-title">
-                            <h3>Full Stack Software Engineer</h3>
-                            <h4>North Atlantic Industries</h4>
-                            <span class="exp-date">Summer 2026 (Incoming)</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Incoming full stack software engineering role at NAI in Bohemia, NY.</p>
+        <ol class="roles">
+            <li class="role role--next" data-rise>
+                <div class="role__when"><span class="mono">Summer 2026</span><em>Incoming</em></div>
+                <div class="role__what">
+                    <h3>Full Stack Software Engineer</h3>
+                    <p class="role__org">North Atlantic Industries &middot; Bohemia, NY</p>
                 </div>
+                <img class="role__logo" src="logos/nai.webp" alt="North Atlantic Industries" loading="lazy">
+            </li>
 
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <img src="logos/ibm.png" alt="IBM" class="exp-logo">
-                        <div class="exp-title">
-                            <h3>Customer Success Engineer</h3>
-                            <h4>IBM</h4>
-                            <span class="exp-date">Fall 2026 (Incoming)</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Incoming customer success engineering role at IBM in San Francisco, CA.</p>
+            <li class="role role--next" data-rise>
+                <div class="role__when"><span class="mono">Fall 2026</span><em>Incoming</em></div>
+                <div class="role__what">
+                    <h3>Customer Success Engineer</h3>
+                    <p class="role__org">IBM &middot; San Francisco, CA</p>
                 </div>
+                <img class="role__logo" src="logos/ibm.png" alt="IBM" loading="lazy">
+            </li>
 
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <img src="logos/lightbox.jpg" alt="LightBox EDR" class="exp-logo">
-                        <div class="exp-title">
-                            <h3>Software Dev Intern</h3>
-                            <h4>LightBox EDR</h4>
-                            <span class="exp-date">May - Jun 2024</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Built ETL pipelines and geospatial data tools using Python and ArcGIS to process environmental site data.</p>
+            <li class="role" data-rise>
+                <div class="role__when"><span class="mono">Dec 2025 &mdash; now</span><em>Research</em></div>
+                <div class="role__what">
+                    <h3>Machine Learning Research Assistant</h3>
+                    <p class="role__org">Stony Brook University, College of Engineering</p>
+                    <p class="role__desc">Applying deep learning to problems in the engineering college &mdash; model design, training runs, and the unglamorous work of making results reproducible.</p>
                 </div>
+                <img class="role__logo" src="logos/stonybrookceas.jpeg" alt="Stony Brook University" loading="lazy">
+            </li>
 
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <img src="logos/stonybrookceas.jpeg" alt="Stony Brook University" class="exp-logo">
-                        <div class="exp-title">
-                            <h3>ML Research Assistant</h3>
-                            <h4>Stony Brook University</h4>
-                            <span class="exp-date">Dec 2025 - Present</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Conducting machine learning research in the College of Engineering, applying deep learning to real-world problems.</p>
+            <li class="role" data-rise>
+                <div class="role__when"><span class="mono">Mar 2025 &mdash; now</span><em>Leadership</em></div>
+                <div class="role__what">
+                    <h3>Project Manager</h3>
+                    <p class="role__org">AI Community @ SBU &middot; 800+ members</p>
+                    <p class="role__desc">Directed 15+ workshops and guest sessions, secured $2K+ in sponsorships, and built Q-Learning and DQN models to teach reinforcement learning to 80+ peers.</p>
                 </div>
+                <img class="role__logo" src="logos/AIC.jpeg" alt="AI Community at SBU" loading="lazy">
+            </li>
 
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <img src="logos/AIC.jpeg" alt="AI Community @ SBU" class="exp-logo">
-                        <div class="exp-title">
-                            <h3>Project Manager</h3>
-                            <h4>AI Community @ SBU</h4>
-                            <span class="exp-date">Mar 2025 - Present</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Leading an 800+ member club, organizing workshops, securing $2K+ in sponsorships, and teaching RL to 80+ peers.</p>
+            <li class="role" data-rise>
+                <div class="role__when"><span class="mono">Jun &mdash; Aug 2025</span><em>Teaching</em></div>
+                <div class="role__what">
+                    <h3>STEM Instructor</h3>
+                    <p class="role__org">Lavner Education</p>
+                    <p class="role__desc">Taught coding, robotics, and game development to K&ndash;12 students &mdash; the fastest way to find out whether you actually understand something.</p>
                 </div>
+                <img class="role__logo" src="logos/lavner_education.jpeg" alt="Lavner Education" loading="lazy">
+            </li>
 
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <img src="logos/lavner_education.jpeg" alt="Lavner Education" class="exp-logo">
-                        <div class="exp-title">
-                            <h3>STEM Instructor</h3>
-                            <h4>Lavner Education</h4>
-                            <span class="exp-date">Jun - Aug 2025</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Teaching coding, robotics, and game development to K-12 students at summer tech camps.</p>
+            <li class="role" data-rise>
+                <div class="role__when"><span class="mono">May &mdash; Jun 2024</span><em>Internship</em></div>
+                <div class="role__what">
+                    <h3>Software Development Intern</h3>
+                    <p class="role__org">LightBox EDR</p>
+                    <p class="role__desc">Built ETL pipelines and geospatial tooling in Python and ArcGIS to process environmental site data.</p>
                 </div>
+                <img class="role__logo" src="logos/lightbox.jpg" alt="LightBox EDR" loading="lazy">
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ─────────────────────────────  NUMBERS  ───────────────────────────── -->
+<section class="section section--tight">
+    <div class="wrap">
+        <header class="section__head">
+            <div>
+                <p class="eyebrow"><i></i>Receipts</p>
+                <h2 class="section__title" data-split>Numbers I can defend.</h2>
             </div>
-        </div>
-    </section>
+            <p class="section__note" data-rise>
+                Every figure below has a commit, a dashboard, or a race bib behind it.
+            </p>
+        </header>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-
-            <div class="university-card">
-                <div class="university-header">
-                    <div class="university-logo">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
-                    </div>
-                    <div class="university-info">
-                        <h3>Stony Brook University</h3>
-                        <p class="university-college">College of Engineering and Applied Sciences</p>
-                        <p class="university-degree">B.S. in Computer Science (Accelerated)</p>
-                        <p class="university-gpa">1st-year GPA: 3.6</p>
-                        <p class="university-date">Expected December 2027</p>
-                    </div>
-                </div>
-
-                <div class="university-details">
-                    <div class="university-section">
-                        <h4>Coursework</h4>
-                        <div class="coursework-tags">
-                            <span>Data Structures & Algorithms</span>
-                            <span>Principles of Prog. Languages</span>
-                            <span>Systems Fundamentals</span>
-                            <span>Applied Linear Algebra</span>
-                            <span>Discrete Math</span>
-                            <span>Computational Geometry</span>
-                            <span>Graph Theory & Combinatorics</span>
-                            <span>Prob. & Stats</span>
-                            <span>Calc III</span>
-                        </div>
-                    </div>
-
-                    <div class="university-section">
-                        <h4>Campus Involvement</h4>
-                        <div class="involvement-grid">
-                            <div class="involvement-item">
-                                <strong>AI Community @ SBU (800+ members)</strong>
-                                <p>Project Manager directing 15+ workshops, guest speakers, and $2K+ sponsorships. Built RL models (Q-Learning, DQN) to teach 80+ peers.</p>
-                            </div>
-                            <div class="involvement-item">
-                                <strong>Athletics & Music</strong>
-                                <p>San Francisco Marathon finisher (4:54, Aug '25). Varsity Wrestling, Track & Volleyball. Violinist in Regional & School Orchestras.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <p class="section-subtitle">Tools and technologies I work with</p>
-
-            <!-- Languages -->
-            <div class="skill-category-block">
-                <h3 class="skill-category-title">Languages</h3>
-                <div class="skill-icons-grid">
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#3776AB" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/><path fill="#FFD43B" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/></svg>
-                        </div>
-                        <span class="skill-name">Python</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#EA2D2E" d="M47.617 98.12c-19.192 5.362 11.677 16.439 36.115 5.969-4.003-1.556-6.874-3.351-6.874-3.351-10.897 2.06-15.952 2.222-25.844 1.092-8.164-.935-3.397-3.71-3.397-3.71zm33.189-10.46c-14.444 2.779-22.787 2.69-33.354 1.6-8.171-.844-2.822-4.805-2.822-4.805-21.137 7.016 11.767 14.977 41.309 6.336-3.14-1.106-5.133-3.131-5.133-3.131zm11.319-60.575c.001 0-42.731 10.669-22.323 34.187 6.024 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.793 15.634-29.58zM79.066 105.259s3.592 2.957-3.96 5.243c-14.37 4.358-59.834 5.672-72.471.173-4.542-1.98 3.972-4.726 6.648-5.303 2.788-.596 4.382-.49 4.382-.49-5.037-3.55-32.564 6.97-13.983 9.983 50.642 8.217 92.313-3.693 79.384-9.606zM85.059 75.458s-22.612 5.362-8.011 7.315c6.167.824 18.458.637 29.918-.325 9.374-.789 18.797-2.478 18.797-2.478s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.731-4.607 19.731-4.607zM90.06 88.998c23.436-12.182 12.597-23.879 5.034-22.293-1.853.391-2.682.731-2.682.731s.69-1.081 2.004-1.547c14.964-5.263 26.469 15.528-4.833 23.766 0 0 .362-.325 .477-.657zM60.812 1.03c12.881 13.276-11.519 33.685-36.72 17.596 10.776-6.882 18.907-12.588 36.72-17.596z"/></svg>
-                        </div>
-                        <span class="skill-name">Java</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"/></svg>
-                        </div>
-                        <span class="skill-name">C</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg>
-                        </div>
-                        <span class="skill-name">JavaScript</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 24c-22.09 0-40 17.91-40 40s17.91 40 40 40 40-17.91 40-40-17.91-40-40-40zm0 70c-16.54 0-30-13.46-30-30s13.46-30 30-30 30 13.46 30 30-13.46 30-30 30z"/><path fill="#888" d="M64 44c-11.03 0-20 8.97-20 20s8.97 20 20 20 20-8.97 20-20-8.97-20-20-20zm-5 25v-10h10v10H59zm15-15H54v20h20V54z"/><text x="64" y="72" text-anchor="middle" fill="#888" font-size="18" font-family="monospace">SQL</text></svg>
-                        </div>
-                        <span class="skill-name">SQL</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#F05138" d="M126.33 34.06a39.32 39.32 0 00-9.85-13.08 38.22 38.22 0 00-14.41-8.24A49.18 49.18 0 0085.05 10a47.89 47.89 0 00-17.06 3 47.26 47.26 0 00-14.54 8.51 44.42 44.42 0 00-10.1 13.21 41.26 41.26 0 00-4.51 16.42 40.73 40.73 0 002.58 17.39 43.35 43.35 0 0010.26 15.8l.42.42a56.94 56.94 0 0017.88 12.1A61.37 61.37 0 0093 101.57a56.78 56.78 0 0019.94-8.15 43 43 0 0012.56-13.17 37.46 37.46 0 005.56-16.56 37.32 37.32 0 00-4.73-29.63zM62.79 65.11a29.76 29.76 0 01-4.49-9A32.89 32.89 0 0156.51 45a31.51 31.51 0 013.19-12.22 27.78 27.78 0 017.67-9.23 24.88 24.88 0 0111-5 29.72 29.72 0 0113.06.52 30.12 30.12 0 0111.39 5.77 32 32 0 018.18 9.93A31.59 31.59 0 01114.63 47a30.49 30.49 0 01-2.49 11.54 27.7 27.7 0 01-6.91 9.14 25.34 25.34 0 01-10.29 5.35 30.1 30.1 0 01-12.53.71 31.63 31.63 0 01-11.83-4.48A33.43 33.43 0 0162.79 65.11z"/></svg>
-                        </div>
-                        <span class="skill-name">SwiftUI</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
-                        </div>
-                        <span class="skill-name">HTML/CSS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Frameworks & Libraries -->
-            <div class="skill-category-block">
-                <h3 class="skill-category-title">Frameworks & Libraries</h3>
-                <div class="skill-icons-grid">
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 64h40M64 44v40" stroke="#888" stroke-width="6" stroke-linecap="round"/></svg>
-                        </div>
-                        <span class="skill-name">Flask</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#FF4B4B" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><circle fill="#FF4B4B" cx="64" cy="64" r="20"/></svg>
-                        </div>
-                        <span class="skill-name">Streamlit</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#FFD21E" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm-10 70c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm30 0c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z"/></svg>
-                        </div>
-                        <span class="skill-name">Hugging Face</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M84 54l-20 30-20-30h40z"/></svg>
-                        </div>
-                        <span class="skill-name">MapKit</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><circle fill="#888" cx="64" cy="64" r="10"/><circle fill="none" stroke="#888" stroke-width="4" cx="64" cy="64" r="25"/></svg>
-                        </div>
-                        <span class="skill-name">CoreLocation</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 44h40v40H44z" stroke="#888" stroke-width="4" fill="none"/></svg>
-                        </div>
-                        <span class="skill-name">GeoJSON</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools & Platforms -->
-            <div class="skill-category-block">
-                <h3 class="skill-category-title">Tools & Platforms</h3>
-                <div class="skill-icons-grid">
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#F90" d="M38.089 77.466l-11.4 4.896 10.606 4.378 11.303-4.69-10.509-4.584zm28.412 0l-10.509 4.584 11.303 4.69 10.606-4.378-11.4-4.896zm28.413 0l-10.51 4.584 11.304 4.69 10.606-4.378-11.4-4.896zM64.501 91.275L53.198 95.86v9.752l11.303-4.689v-9.647zm0-13.228l-11.303 4.69v9.646l11.303-4.689v-9.647zM38.089 91.275L26.786 95.86v9.752l11.303-4.689v-9.647zm0-13.228l-11.303 4.69v9.646l11.303-4.689v-9.647zm56.825 13.228l-11.303 4.585v9.752l11.303-4.689v-9.647zm0-13.228l-11.303 4.69v9.646l11.303-4.689v-9.647zM64.501 17.775L18.272 37.8l46.229 20.025L110.73 37.8 64.501 17.775z"/></svg>
-                        </div>
-                        <span class="skill-name">AWS</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#F05032" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/></svg>
-                        </div>
-                        <span class="skill-name">Git</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 5.1c-32.5 0-59 26.4-59 59s26.4 59 59 59 59-26.4 59-59-26.4-59-59-59zm0 108c-27.1 0-49-21.9-49-49s21.9-49 49-49 49 21.9 49 49-21.9 49-49 49z"/><path fill="#888" d="M64 34c-16.5 0-30 13.5-30 30s13.5 30 30 30 30-13.5 30-30-13.5-30-30-30zm0 50c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20z"/></svg>
-                        </div>
-                        <span class="skill-name">GitHub</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 54h40v6H44zm0 14h30v6H44z"/></svg>
-                        </div>
-                        <span class="skill-name">REST APIs</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#2C7AC3" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#2C7AC3" d="M44 64h40M64 44v40" stroke="#2C7AC3" stroke-width="6" stroke-linecap="round"/></svg>
-                        </div>
-                        <span class="skill-name">ESRI ArcGIS</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M54 44h20v40H54z"/></svg>
-                        </div>
-                        <span class="skill-name">Pyenv</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 64c0-11 9-20 20-20s20 9 20 20"/></svg>
-                        </div>
-                        <span class="skill-name">Poetry</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 74l20-30 20 30H44z"/></svg>
-                        </div>
-                        <span class="skill-name">Click</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Tools -->
-            <div class="skill-category-block">
-                <h3 class="skill-category-title">AI Tools</h3>
-                <div class="skill-icons-grid">
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#D97757" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#D97757" d="M44 54h40v6H44zm0 14h30v6H44z"/></svg>
-                        </div>
-                        <span class="skill-name">Claude Code</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M54 44h6v40h-6zm14 0h6v40h-6z"/></svg>
-                        </div>
-                        <span class="skill-name">Cursor</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Practices -->
-            <div class="skill-category-block">
-                <h3 class="skill-category-title">Practices</h3>
-                <div class="skill-icons-grid">
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 44h20v40H44zm26 0h14v40H70z"/></svg>
-                        </div>
-                        <span class="skill-name">Full-Stack Dev</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 64l15 15 25-30" stroke="#888" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <span class="skill-name">Automated Testing</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><circle fill="#888" cx="64" cy="64" r="8"/><path fill="#888" d="M64 44v12m0 16v12m-20-20h12m16 0h12" stroke="#888" stroke-width="4"/></svg>
-                        </div>
-                        <span class="skill-name">Debugging</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 64c0-11 9-20 20-20m20 20c0 11-9 20-20 20" stroke="#888" stroke-width="4" fill="none"/><path fill="#888" d="M64 44l10 10-10 10m0 20l-10-10 10-10" stroke="#888" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <span class="skill-name">CI/CD</span>
-                    </div>
-                    <div class="skill-icon-item">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 128 128"><path fill="#888" d="M64 14c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="#888" d="M44 54h12v20H44zm24 0h12v20H68zm-12 10h12" stroke="#888" stroke-width="4"/></svg>
-                        </div>
-                        <span class="skill-name">Agile</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">What I'm building</p>
-
-            <!-- Project 1: Circular -->
-            <article class="project-showcase" id="project-circular">
-                <div class="project-showcase-header">
-                    <div class="project-showcase-title">
-                        <h3>Circular</h3>
-                        <span class="project-lang">Swift / iOS</span>
-                    </div>
-                    <a href="https://github.com/anjan-r-athreya/Circular" target="_blank" class="project-github-link">
-                        View on GitHub
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </a>
-                </div>
-
-                <div class="project-showcase-media">
-                    <div class="project-video-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/z8spHShT19k"
-                            title="Circular App Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="project-showcase-content">
-                    <ul class="project-description-list">
-                        <li>Developed an iOS training app with precise (+/-0.1 mile) dynamic route generation for custom distance goals, leveraging MapKit, CoreLocation, and Mapbox frameworks; trained with it for the San Francisco Marathon</li>
-                        <li>Cut API load by 50% by optimizing search scaling, reducing route generation attempts by 40% while maintaining ±1% distance accuracy under a geospatial constraint (2 edges per waypoint)</li>
-                        <li>Drove product refinement through user insights and social media marketing (YouTube, Instagram), generating 10,000+ views and building a beta community of 100+ users with active feedback from 10+ early testers</li>
-                    </ul>
-                    <div class="project-tech-stack">
-                        <span>Swift</span>
-                        <span>MapKit</span>
-                        <span>CoreLocation</span>
-                        <span>iOS</span>
-                    </div>
+        <div class="stats">
+            <article class="stat" data-rise>
+                <img src="floats/IMG_4136.jpg" alt="" loading="lazy" aria-hidden="true">
+                <div class="stat__body">
+                    <p class="stat__num">50%</p>
+                    <h3>Less API load</h3>
+                    <p>Optimized search scaling in Circular, cutting route-generation attempts 40% while holding &plusmn;1% distance accuracy.</p>
                 </div>
             </article>
-
-            <div class="project-divider"></div>
-
-            <!-- Project 2: nb2prod -->
-            <article class="project-showcase" id="project-nb2prod">
-                <div class="project-showcase-header">
-                    <div class="project-showcase-title">
-                        <h3>nb2prod</h3>
-                        <span class="project-lang">Python</span>
-                    </div>
-                    <a href="https://github.com/anjan-r-athreya/notebook2production" target="_blank" class="project-github-link">
-                        View on GitHub
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </a>
-                </div>
-
-                <div class="project-showcase-media">
-                    <div class="project-image-container">
-                        <img src="logos/nb2prod-screenshot.jpeg" alt="nb2prod - Notebook to Production interface">
-                    </div>
-                </div>
-
-                <div class="project-showcase-content">
-                    <ul class="project-description-list">
-                        <li>Built an AI-powered tool that automatically converts messy Jupyter notebooks into production-ready Python projects, reducing deployment time from hours to minutes through intelligent code analysis and function extraction</li>
-                        <li>Developed a full-stack solution with both CLI and Streamlit web interface, featuring automated production readiness scoring (0-10), execution order validation, and Claude AI integration for generating optimized code with proper documentation and error handling</li>
-                        <li>Engineered a multi-phase refactoring pipeline using AST analysis and LLM enhancement that transforms exploratory data science code into maintainable software projects with proper structure, configuration management, and 25+ automated tests achieving full code coverage</li>
-                    </ul>
-                    <div class="project-tech-stack">
-                        <span>Python</span>
-                        <span>Click</span>
-                        <span>Claude API</span>
-                        <span>Jupyter</span>
-                    </div>
+            <article class="stat" data-rise data-rise-delay="90">
+                <img src="floats/IMG_6546.jpg" alt="" loading="lazy" aria-hidden="true">
+                <div class="stat__body">
+                    <p class="stat__num">800+</p>
+                    <h3>Members reached</h3>
+                    <p>AI Community @ SBU. Fifteen workshops, $2K+ in sponsorship, and an RL curriculum taught to 80+ peers.</p>
                 </div>
             </article>
-
-            <div class="project-divider"></div>
-
-            <!-- Project 3: arXiv MCP -->
-            <article class="project-showcase" id="project-arxiv-mcp">
-                <div class="project-showcase-header">
-                    <div class="project-showcase-title">
-                        <h3>arXiv MCP Server</h3>
-                        <span class="project-lang">Python / MCP</span>
-                    </div>
-                    <a href="https://github.com/anjan-r-athreya/arXiv-mcp" target="_blank" class="project-github-link">
-                        View on GitHub
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </a>
-                </div>
-
-                <div class="project-showcase-media">
-                    <div class="project-image-container">
-                        <img src="arxiv-mcp-gif.gif" alt="arXiv MCP Server - Claude Code interface">
-                    </div>
-                </div>
-
-                <div class="project-showcase-content">
-                    <ul class="project-description-list">
-                        <li>MCP server giving Claude and Cursor a persistent, semantically searchable arXiv paper library</li>
-                        <li>Dual-storage architecture (SQLite + ChromaDB) with local embeddings for semantic search across 39K+ chars of extracted PDF text</li>
-                        <li>15 tools spanning the full research workflow: paper import, fulltext search, PDF annotation extraction</li>
-                        <li>Preprint-to-DOI tracking via Semantic Scholar/Crossref, duplicate detection, and KMeans topic clustering</li>
-                    </ul>
-                    <div class="project-tech-stack">
-                        <span>Python</span>
-                        <span>MCP</span>
-                        <span>SQLite</span>
-                        <span>ChromaDB</span>
-                        <span>Semantic Scholar API</span>
-                    </div>
+            <article class="stat" data-rise data-rise-delay="180">
+                <img src="floats/DSC04731.jpg" alt="" loading="lazy" aria-hidden="true">
+                <div class="stat__body">
+                    <p class="stat__num">4:54</p>
+                    <h3>San Francisco Marathon</h3>
+                    <p>Finished August 2025 with primary ciliary dyskinesia. The training app on this page is the one I used to get there.</p>
                 </div>
             </article>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section-compact">
-        <div class="container">
-            <div class="contact-row">
-                <span class="contact-label">Get in touch</span>
-                <div class="contact-links-compact">
-                    <a href="mailto:anjan.r.athreya@gmail.com" class="contact-link-compact">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                        anjan.r.athreya@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/anjan-athreya" target="_blank" class="contact-link-compact">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/anjan-r-athreya" target="_blank" class="contact-link-compact">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    <a href="tel:2037274972" class="contact-link-compact">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                        (203) 727-4972
-                    </a>
+<!-- ═══════════════  LIGHT HALF  ═══════════════ -->
+<div class="paper">
+
+<!-- ─────────────────────────────  PROJECTS  ───────────────────────────── -->
+<section class="section" id="projects">
+    <div class="wrap">
+        <header class="section__head">
+            <div>
+                <p class="eyebrow"><i></i>Projects</p>
+                <h2 class="section__title" data-split>Three things I shipped.</h2>
+            </div>
+            <p class="section__note" data-rise>
+                One iOS app I trained a marathon on, one tool that cleans up after data scientists,
+                and one server that gives Claude a research library.
+            </p>
+        </header>
+
+        <article class="project" data-rise>
+            <div class="project__head">
+                <span class="mono project__idx">01</span>
+                <h3>Circular</h3>
+                <span class="mono project__lang">Swift &middot; iOS</span>
+                <a href="https://github.com/anjan-r-athreya/Circular" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
+                    GitHub
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
+                </a>
+            </div>
+            <div class="project__media">
+                <iframe src="https://www.youtube.com/embed/z8spHShT19k" title="Circular app demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project__text">
+                <ul>
+                    <li>Generates running routes to a target distance within &plusmn;0.1 mile, using MapKit, CoreLocation and Mapbox under a two-edges-per-waypoint geospatial constraint.</li>
+                    <li>Cut API load 50% and route-generation attempts 40% by rewriting the search scaling, with no loss in accuracy.</li>
+                    <li>Grew a 100+ user beta from 10,000+ views across YouTube and Instagram, and shipped changes from what the first ten testers actually complained about.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Swift</span><span class="tag">MapKit</span><span class="tag">CoreLocation</span><span class="tag">Mapbox</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project" data-rise>
+            <div class="project__head">
+                <span class="mono project__idx">02</span>
+                <h3>nb2prod</h3>
+                <span class="mono project__lang">Python</span>
+                <a href="https://github.com/anjan-r-athreya/notebook2production" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
+                    GitHub
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
+                </a>
+            </div>
+            <div class="project__media">
+                <img src="logos/nb2prod-screenshot.jpeg" alt="nb2prod converting a Jupyter notebook into a structured Python project" loading="lazy">
+            </div>
+            <div class="project__text">
+                <ul>
+                    <li>Turns a messy Jupyter notebook into a production-ready Python project, dropping deployment from hours to minutes.</li>
+                    <li>Scores production readiness 0&ndash;10, validates execution order, and uses Claude to generate documented, error-handled code &mdash; available as both a CLI and a Streamlit app.</li>
+                    <li>Multi-phase refactoring pipeline built on AST analysis plus LLM enhancement, covered by 25+ automated tests.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Click</span><span class="tag">Claude API</span><span class="tag">Streamlit</span><span class="tag">AST</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project" data-rise>
+            <div class="project__head">
+                <span class="mono project__idx">03</span>
+                <h3>arXiv MCP Server</h3>
+                <span class="mono project__lang">Python &middot; MCP</span>
+                <a href="https://github.com/anjan-r-athreya/arXiv-mcp" target="_blank" rel="noopener" class="project__link" data-blob data-tooltip="Open on GitHub">
+                    GitHub
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
+                </a>
+            </div>
+            <div class="project__media">
+                <img src="arxiv-mcp-gif.gif" alt="arXiv MCP server running inside Claude Code" loading="lazy">
+            </div>
+            <div class="project__text">
+                <ul>
+                    <li>Gives Claude and Cursor a persistent, semantically searchable arXiv library instead of a fresh context every session.</li>
+                    <li>Dual-storage architecture &mdash; SQLite plus ChromaDB with local embeddings &mdash; searching across 39K+ characters of extracted PDF text.</li>
+                    <li>Fifteen tools covering the full research loop: import, fulltext search, annotation extraction, preprint-to-DOI tracking via Semantic Scholar and Crossref, duplicate detection, and KMeans topic clustering.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">SQLite</span><span class="tag">ChromaDB</span><span class="tag">Semantic Scholar</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ─────────────────────────────  STACK  ───────────────────────────── -->
+<section class="section section--tight" id="stack">
+    <div class="wrap">
+        <header class="section__head">
+            <div>
+                <p class="eyebrow"><i></i>Stack</p>
+                <h2 class="section__title" data-split>What I reach for.</h2>
+            </div>
+            <p class="section__note" data-rise>
+                Listed by how often I actually open them, not by how they look on a resume.
+            </p>
+        </header>
+
+        <div class="stack">
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Languages</h3>
+                <div class="chips">
+                    <span class="chip">Python</span><span class="chip">Swift</span><span class="chip">Java</span>
+                    <span class="chip">C</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
+                    <span class="chip">HTML &amp; CSS</span>
+                </div>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">ML &amp; data</h3>
+                <div class="chips">
+                    <span class="chip">PyTorch</span><span class="chip">Hugging Face</span><span class="chip">ChromaDB</span>
+                    <span class="chip">Q-Learning</span><span class="chip">DQN</span><span class="chip">KMeans</span>
+                </div>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Frameworks</h3>
+                <div class="chips">
+                    <span class="chip">SwiftUI</span><span class="chip">MapKit</span><span class="chip">CoreLocation</span>
+                    <span class="chip">Flask</span><span class="chip">Streamlit</span><span class="chip">Click</span>
+                    <span class="chip">MCP</span>
+                </div>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Platforms &amp; tools</h3>
+                <div class="chips">
+                    <span class="chip">AWS</span><span class="chip">Git</span><span class="chip">ESRI ArcGIS</span>
+                    <span class="chip">GeoJSON</span><span class="chip">Poetry</span><span class="chip">Pyenv</span>
+                    <span class="chip">Claude Code</span><span class="chip">Cursor</span>
+                </div>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Practices</h3>
+                <div class="chips">
+                    <span class="chip">Automated testing</span><span class="chip">CI/CD</span>
+                    <span class="chip">REST API design</span><span class="chip">Agile</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Anjan Athreya. All rights reserved.</p>
-            <p class="footer-location">Fairfield, Connecticut</p>
+</div><!-- /.paper -->
+
+<!-- ─────────────────────────────  EDUCATION  ───────────────────────────── -->
+<section class="section" id="education">
+    <div class="wrap">
+        <div class="edu" data-rise>
+            <img class="edu__bg" src="sbu-campus.jpg" alt="" loading="lazy" aria-hidden="true">
+            <div class="grain" aria-hidden="true"></div>
+            <div class="edu__inner">
+                <div class="edu__lede">
+                    <p class="eyebrow"><i></i>Education</p>
+                    <h2>Stony Brook University</h2>
+                    <p class="edu__deg">B.S. Computer Science (accelerated) &amp; Applied Mathematics and Statistics</p>
+                    <dl class="edu__facts">
+                        <div><dt>Expected</dt><dd class="mono">Dec 2027</dd></div>
+                        <div><dt>First-year GPA</dt><dd class="mono">3.60</dd></div>
+                        <div><dt>College</dt><dd>Engineering &amp; Applied Sciences</dd></div>
+                    </dl>
+                </div>
+                <div class="edu__grid">
+                    <div class="edu__card">
+                        <h3>Coursework</h3>
+                        <p>Data Structures &amp; Algorithms &middot; Principles of Programming Languages &middot; Systems Fundamentals &middot; Applied Linear Algebra &middot; Discrete Mathematics &middot; Computational Geometry &middot; Graph Theory &amp; Combinatorics &middot; Probability &amp; Statistics &middot; Calculus III</p>
+                    </div>
+                    <div class="edu__card">
+                        <h3>Beyond the transcript</h3>
+                        <p>Project Manager of an 800-member AI community. San Francisco Marathon finisher. Varsity wrestling, track and volleyball. Violinist in regional and school orchestras.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- ─────────────────────────────  LIFE  ───────────────────────────── -->
+<section class="section section--tight" id="life">
+    <div class="wrap">
+        <header class="section__head">
+            <div>
+                <p class="eyebrow"><i></i>Off the clock</p>
+                <h2 class="section__title" data-split>The rest of it.</h2>
+            </div>
+            <p class="section__note" data-rise>
+                Running, cooking, my brothers, and a little sister who reminds me to stop working.
+            </p>
+        </header>
+    </div>
+
+    <div class="gallery" data-marquee data-marquee-speed="0.35">
+        <div class="gallery__track" data-marquee-track>
+            <figure class="shot"><img src="CarouselSlides/one.png" alt="Dorm wall of discipline, perseverance and family" loading="lazy"><figcaption>Discipline, perseverance, family &mdash; on the wall so I see it every morning.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/two.png" alt="Teaching an AI workshop" loading="lazy"><figcaption>Teaching AI at SBU. Explaining it is how I learn it.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/three.png" alt="Cooking for friends" loading="lazy"><figcaption>Cooking for people. The fastest way to build a team.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/four.png" alt="Outdoors" loading="lazy"><figcaption>Outside, where the hard problems get solved.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/five.png" alt="With my brothers" loading="lazy"><figcaption>Arjun got me into CS and math. Ashwath taught me how to work.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/six.png" alt="With friends" loading="lazy"><figcaption>The best experiences are the shared ones.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/eight.png" alt="Running the San Francisco Marathon" loading="lazy"><figcaption>26.2 miles with PCD. The setback was never the point.</figcaption></figure>
+            <figure class="shot"><img src="CarouselSlides/nine.png" alt="With my sister Mayaa" loading="lazy"><figcaption>Mayaa. She is the reason I take breaks.</figcaption></figure>
+        </div>
+    </div>
+</section>
+
+<!-- ─────────────────────────────  CONTACT  ───────────────────────────── -->
+<section class="cta" id="contact">
+    <img class="cta__bg" src="sbu-campus.jpg" alt="" loading="lazy" aria-hidden="true">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap cta__inner">
+        <div>
+            <p class="eyebrow"><i></i>Get in touch</p>
+            <h2 class="section__title" data-split>Tell me what you&rsquo;re building.</h2>
+        </div>
+        <div class="cta__side" data-rise>
+            <p>Open to Summer 2027 internships in ML, infrastructure, and developer tools &mdash; and always happy to talk about any of the above.</p>
+            <div class="cta__links">
+                <a href="mailto:anjan.r.athreya@gmail.com" class="pill pill--light" data-blob data-tooltip="Copy that">Email me</a>
+                <a href="https://www.linkedin.com/in/anjan-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>LinkedIn</a>
+                <a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ─────────────────────────────  FOOTER  ───────────────────────────── -->
+<footer class="footer">
+    <div class="wrap footer__top">
+        <div class="footer__id">
+            <img src="pfp-gray.jpg" alt="Anjan Athreya" class="footer__pfp" loading="lazy">
+            <div>
+                <p class="footer__name">Anjan Athreya</p>
+                <p class="footer__role">CS &amp; Applied Mathematics, Stony Brook &rsquo;27</p>
+            </div>
+        </div>
+        <dl class="footer__cols">
+            <div>
+                <dt>Reach me</dt>
+                <dd><a href="mailto:anjan.r.athreya@gmail.com" data-blob>anjan.r.athreya@gmail.com</a></dd>
+                <dd><a href="tel:+12037274972" data-blob>(203) 727&ndash;4972</a></dd>
+                <dd>Fairfield, Connecticut</dd>
+            </div>
+            <div>
+                <dt>Elsewhere</dt>
+                <dd><a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" data-blob>GitHub</a></dd>
+                <dd><a href="https://www.linkedin.com/in/anjan-athreya" target="_blank" rel="noopener" data-blob>LinkedIn</a></dd>
+            </div>
+            <div>
+                <dt>This page</dt>
+                <dd><a href="#work" data-blob>Work</a></dd>
+                <dd><a href="#projects" data-blob>Projects</a></dd>
+                <dd><a href="#stack" data-blob>Stack</a></dd>
+            </div>
+        </dl>
+    </div>
+
+    <p class="footer__ghost" aria-hidden="true">Athreya</p>
+
+    <div class="wrap footer__base">
+        <p>&copy; 2026 Anjan Athreya</p>
+        <p class="mono">Fairfield, CT &middot; 41.14&deg;N 73.26&deg;W</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
