@@ -55,7 +55,7 @@
        Wheel input is intercepted and eased into the real scroll position, so the
        page keeps native scrollbars, anchors, and fixed positioning. Touch and
        keyboard fall through to the browser untouched. */
-    var scroll = { current: 0, target: 0, velocity: 0, active: false };
+    var scroll = { current: 0, target: 0, velocity: 0, active: false, lastTick: 0 };
 
     function smoothScroll() {
         if (reduced || !finePointer) {
@@ -77,6 +77,13 @@
         window.addEventListener("wheel", function (e) {
             if (e.ctrlKey) return;                       // pinch-zoom
             if (document.body.classList.contains("is-locked")) return;
+            // if the animation loop has stalled (backgrounded tab, blocked main
+            // thread) swallowing the wheel would leave the page unscrollable —
+            // hand it back to the browser instead
+            if (performance.now() - scroll.lastTick > 250) {
+                scroll.target = scroll.current = window.scrollY;
+                return;
+            }
             e.preventDefault();
             scroll.target = clamp(scroll.target + e.deltaY, 0, maxScroll());
         }, { passive: false });
@@ -95,6 +102,7 @@
 
     function smoothScrollTick() {
         if (!scroll.active) return;
+        scroll.lastTick = performance.now();
         var next = lerp(scroll.current, scroll.target, 0.1);
         if (Math.abs(next - scroll.current) < 0.08) next = scroll.target;
         scroll.velocity = next - scroll.current;
