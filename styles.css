@@ -842,42 +842,43 @@ a { color: inherit; text-decoration: none; }
     object-fit: cover;
 }
 /* the Circular demo is a vertical short — give it an actual device frame
-   instead of letterboxing it inside a 16:9 box. Bezel thickness is the
-   padding; the inner radius is the outer radius minus that padding, the
-   rule real device mockups use so the corners read as concentric. */
+   instead of letterboxing it inside a 16:9 box. The frame is a real
+   screenshot of the iOS Simulator's own chrome (Xcode 26, iPhone 17),
+   cropped to the device silhouette and cut to two rounded-rect alpha
+   holes — the screen and the outer corners — so it's exactly the
+   simulator's own bezel, buttons and dynamic island, not a redrawn
+   approximation of one. The gif sits underneath, inset to the exact
+   pixel bounds of that screen hole; the frame PNG rides on top. */
 .project__media--phone {
-    aspect-ratio: 10 / 16;
-    max-width: 340px;
+    aspect-ratio: 620 / 1294;
+    max-width: 300px;
     margin-inline: auto;
     position: relative;
-    padding: 14px;
+    background: none;
     border: 0;
-    background:
-        radial-gradient(120% 100% at 28% 0%, #303034 0%, #0a0a0c 55%),
-        linear-gradient(165deg, #201f22, #050506);
-    border-radius: 54px;
-    box-shadow:
-        0 40px 90px -32px rgba(0, 0, 0, .5),
-        inset 0 0 0 1px rgba(255, 255, 255, .09),
-        inset 0 1px 1px rgba(255, 255, 255, .14);
+    overflow: visible;
+    filter: drop-shadow(0 32px 60px rgba(0, 0, 0, .38));
 }
-.project__media--phone::before {
-    content: "";
+.project__media--phone .phone__screen {
+    /* explicit width/height %, not right/bottom insets — a replaced element
+       (img) with all four offsets set sizes itself from its intrinsic ratio
+       instead of the inset box, which let the gif spill past the frame */
     position: absolute;
-    top: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 76px;
-    height: 22px;
-    background: #000;
-    border-radius: 14px;
-    z-index: 2;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+    top: 3.42%;
+    left: 4.67%;
+    width: 90.78%;
+    height: 94.64%;
+    object-fit: cover;
+    z-index: 1;
 }
-.project__media--phone iframe,
-.project__media--phone img,
-.project__media--phone video {
-    border-radius: 40px;
+.project__media--phone .phone__frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    border: 0;
 }
 .project__media--phone.project__media--link {
     display: block;
