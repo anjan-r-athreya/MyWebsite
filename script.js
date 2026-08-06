@@ -220,14 +220,35 @@
                 }
             }
 
-            b.x = lerp(b.x, tx, snap ? 0.22 : 0.16);
-            b.y = lerp(b.y, ty, snap ? 0.22 : 0.16);
-            b.w = lerp(b.w, tw, 0.22);
-            b.h = lerp(b.h, th, 0.22);
+            // idle roam is deliberately slower than the target-fit — the shape
+            // has to catch up to the pointer rather than sit glued to it, which
+            // is what reads as weight. Snapped stays close to the old pace so
+            // magnetic targets still feel precise, not sluggish.
+            var prevX = b.x, prevY = b.y;
+            var posLerp = snap ? 0.21 : 0.115;
+            b.x = lerp(b.x, tx, posLerp);
+            b.y = lerp(b.y, ty, posLerp);
+            b.w = lerp(b.w, tw, 0.21);
+            b.h = lerp(b.h, th, 0.21);
 
             blob.style.width = b.w.toFixed(1) + "px";
             blob.style.height = b.h.toFixed(1) + "px";
-            blob.style.transform = "translate(" + (b.x - b.w / 2).toFixed(1) + "px," + (b.y - b.h / 2).toFixed(1) + "px)";
+
+            // a little momentum while roaming free: the shape leans and
+            // stretches into its own velocity, then relaxes square once it
+            // catches up. Switched off while snapped so a magnetic fit stays
+            // exact instead of wobbling against the button it just landed on.
+            var extra = "";
+            if (!snap) {
+                var vx = b.x - prevX, vy = b.y - prevY;
+                var speed = Math.hypot(vx, vy);
+                if (speed > 0.15) {
+                    var angle = Math.atan2(vy, vx) * 180 / Math.PI;
+                    var stretch = clamp(speed * 0.05, 0, 0.22);
+                    extra = " rotate(" + angle.toFixed(1) + "deg) scale(" + (1 + stretch).toFixed(3) + "," + (1 - stretch * 0.55).toFixed(3) + ") rotate(" + (-angle).toFixed(1) + "deg)";
+                }
+            }
+            blob.style.transform = "translate(" + (b.x - b.w / 2).toFixed(1) + "px," + (b.y - b.h / 2).toFixed(1) + "px)" + extra;
 
             d.x = lerp(d.x, mouse.x, 0.42);
             d.y = lerp(d.y, mouse.y, 0.42);
