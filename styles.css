@@ -441,12 +441,34 @@ a { color: inherit; text-decoration: none; }
 .hero__body { position: relative; z-index: 2; max-width: 900px; }
 
 .hero__title {
+    position: relative;
     margin: 6px 0 26px;
     font-size: clamp(42px, 7.4vw, 96px);
     font-weight: 400;
     line-height: .99;
     letter-spacing: -.032em;
     text-wrap: balance;
+}
+
+/* floating over the line break, the way the reference portfolio runs its
+   own headshot across its name — top/left + negative margins instead of
+   translate(-50%,-50%) so the reveal system's own transform (a slide-up
+   fade) doesn't fight the centering for the same CSS property */
+.hero__pfp {
+    --size: clamp(64px, 8vw, 104px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--size);
+    height: var(--size);
+    margin-top: calc(var(--size) / -2);
+    margin-left: calc(var(--size) / -2);
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid var(--fg);
+    box-shadow: 0 20px 46px -12px rgba(0, 0, 0, .65);
+    z-index: 3;
+    filter: grayscale(1);
 }
 
 .hero__sub {
@@ -631,39 +653,6 @@ a { color: inherit; text-decoration: none; }
     color: var(--fg-faint);
 }
 .role--next .role__when em { color: var(--ember); border-color: color-mix(in srgb, var(--ember) 34%, transparent); }
-
-/* the one role that gets to be huge — 700 members is the kind of number
-   that deserves more than a hairline row, so it breaks the list rhythm
-   into its own warmly-lit card with the figure restated as texture */
-.role--big {
-    position: relative;
-    z-index: 0;
-    margin-block: 14px;
-    padding: 40px 32px;
-    border: 1px solid color-mix(in srgb, var(--ember) 22%, var(--line));
-    border-radius: 20px;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--ember) 9%, var(--surface)), var(--surface));
-    overflow: hidden;
-}
-.role--big::after {
-    content: attr(data-ghost);
-    position: absolute;
-    right: -.02em;
-    bottom: -.16em;
-    font-size: clamp(120px, 15vw, 220px);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -.045em;
-    color: var(--ember);
-    opacity: .10;
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-    font-variant-numeric: tabular-nums;
-}
-.role--big .role__what h3 { font-size: clamp(22px, 2.6vw, 30px); }
-.role--big .role__logo { height: 42px; opacity: .68; }
-.role--big:hover .role__logo { opacity: 1; }
 
 .role__what h3 {
     font-size: clamp(19px, 2.1vw, 24px);
