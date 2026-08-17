@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjan Athreya — CS &amp; Applied Mathematics</title>
     <meta name="description" content="Anjan Athreya builds full-stack systems, machine learning research, and developer tools. CS &amp; Applied Mathematics at Stony Brook University.">
-    <meta name="theme-color" content="#0F0E0D">
+    <meta name="theme-color" content="#0B1014">
 
     <meta property="og:title" content="Anjan Athreya — CS &amp; Applied Mathematics">
     <meta property="og:description" content="Full-stack systems, machine learning research, and developer tools. Stony Brook University, class of 2027.">
@@ -22,7 +22,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -48,21 +48,22 @@
 <!-- ─────────────────────────────  NAV  ───────────────────────────── -->
 <header class="nav" id="nav">
     <nav class="nav__inner">
+        <a href="#top" class="nav__mark" data-blob data-tooltip="Back to top">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3 12l9 9.5 9-9.5-9-9.5Zm0 4.2 5 5.3-5 5.3-5-5.3 5-5.3Z"/></svg>
+            <span>Anjan Athreya</span>
+        </a>
         <ul class="nav__links">
             <li><a href="#work" data-blob>Work</a></li>
             <li><a href="#projects" data-blob>Projects</a></li>
             <li><a href="#stack" data-blob>Stack</a></li>
             <li><a href="#life" data-blob>Life</a></li>
         </ul>
-        <a href="#top" class="nav__mark" data-blob data-tooltip="Back to top">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3 12l9 9.5 9-9.5-9-9.5Zm0 4.2 5 5.3-5 5.3-5-5.3 5-5.3Z"/></svg>
-            <span>Anjan Athreya</span>
-        </a>
         <div class="nav__actions">
-            <a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" class="icon-btn nav__resume" data-blob data-tooltip="Download résumé" aria-label="Download résumé (PDF)">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            <a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" class="nav__resume" data-blob data-tooltip="1-page PDF">Résumé</a>
+            <a href="#contact" class="btn btn--blue nav__cta" data-blob>
+                Get in touch
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
             </a>
-            <a href="#contact" class="pill pill--light nav__cta" data-blob data-tooltip="Let's talk">Get in touch</a>
         </div>
     </nav>
 </header>
@@ -70,40 +71,45 @@
 <main id="top">
 
 <!-- ─────────────────────────────  HERO  ───────────────────────────── -->
-<section class="hero">
-    <div class="hero__photo" aria-hidden="true">
-        <img src="sbu-campus.jpg" alt="" id="heroImg" fetchpriority="high">
-    </div>
-    <div class="grain" aria-hidden="true"></div>
-
-    <div class="hero__body">
-        <p class="eyebrow eyebrow--live"><i></i>CS &amp; Applied Mathematics, Stony Brook &rsquo;27</p>
-
-        <h1 class="hero__title" data-split>
-            I build systems that<br>learn and hold up.<img class="hero__pfp" src="pfp-gray.jpg" alt="" loading="eager" data-rise data-rise-delay="640">
-        </h1>
-
-        <p class="hero__sub" data-rise>
-            Full-stack systems, machine learning research, and developer tooling &mdash; shipped to real users,
-            measured honestly, and rebuilt when the numbers say so.
-        </p>
-
-        <div class="hero__cta" data-rise data-rise-delay="120">
-            <a href="#projects" class="pill pill--light" data-blob data-tooltip="Three things I shipped">See the work</a>
-            <a href="#contact" class="pill pill--ghost" data-blob>Get in touch</a>
+<section class="hero" data-scrub data-scrub-end="0.72">
+    <div class="hero__pin">
+        <!-- zoom rect = the laptop's white screen, measured off the final frame -->
+        <div class="hero__media screen" data-halftone data-halftone-sheet="11,11,121"
+             data-halftone-gain="1" data-halftone-gamma="1.05"
+             data-halftone-focus="0.496,0.42"
+             data-halftone-zoom="0.297,0.181,0.398,0.440" aria-hidden="true">
+            <img id="heroFrames" src="hero-frames.jpg" alt="" fetchpriority="high">
         </div>
 
-        <div class="hero__meta" data-rise data-rise-delay="220">
-            <span>Fairfield, Connecticut</span>
-            <span aria-hidden="true">&middot;</span>
-            <span>Open to Summer 2027 roles</span>
-        </div>
-    </div>
+        <div class="hero__inner">
+            <h1 class="hero__title" data-split>I build systems that learn and hold up.</h1>
 
-    <a href="#affil" class="hero__scroll" data-blob aria-label="Scroll down">
-        <span>Scroll</span>
-        <i></i>
-    </a>
+            <div class="hero__foot">
+                <div>
+                    <p class="hero__sub" data-rise>
+                        I&rsquo;m Anjan &mdash; CS &amp; Applied Mathematics at Stony Brook, class of &rsquo;27.
+                        I build full-stack systems, iOS apps, and machine-learning tools.
+                    </p>
+                    <div class="hero__cta" data-rise data-rise-delay="120">
+                        <a href="#projects" class="btn btn--blue" data-blob>
+                            See the work
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn--ghost" data-blob>Get in touch</a>
+                    </div>
+                </div>
+
+                <div class="hero__ticker" data-rise data-rise-delay="220">
+                    <img class="hero__pfp" src="pfp-gray.jpg" alt="Anjan Athreya" loading="eager">
+                    <span class="hero__ticker-line" aria-hidden="true"></span>
+                    <span>Open to Summer 2027 roles</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__rail" aria-hidden="true"><i></i></div>
+        <div class="hero__flash" aria-hidden="true"></div>
+    </div>
 </section>
 
 <!-- ─────────────────────────────  AFFILIATIONS  ───────────────────────────── -->
@@ -120,29 +126,12 @@
     </div>
 </section>
 
-<!-- ─────────────────────────────  MANIFESTO  ───────────────────────────── -->
-<section class="manifesto">
-    <p class="manifesto__text" data-words>
-        Most student projects die at the demo.
-        They work once, on one machine, for one person.
-        I care about the part that comes after &mdash; the tests, the latency, the user
-        who opens it on a Tuesday and expects it to work.
-        That is the only part that counts.
-    </p>
-</section>
-
 <!-- ─────────────────────────────  WORK  ───────────────────────────── -->
 <section class="section" id="work">
     <div class="wrap">
         <header class="section__head">
-            <div>
-                <p class="eyebrow"><i></i>Experience</p>
-                <h2 class="section__title" data-split>Five roles, one throughline.</h2>
-            </div>
-            <p class="section__note" data-rise>
-                Research, enterprise engineering, and a community I scaled to 700+ members.
-                Every one of them came down to understanding a system &mdash; technical or human &mdash; well enough to change it safely.
-            </p>
+            <p class="eyebrow eyebrow--rule">Experience</p>
+            <h2 class="section__title" data-split>Where I&rsquo;ve worked.</h2>
         </header>
 
         <ol class="roles">
@@ -199,63 +188,57 @@
     </div>
 </section>
 
-<!-- ─────────────────────────────  NUMBERS  ───────────────────────────── -->
+<!-- ─────────────────────────────  NOW  ───────────────────────────── -->
 <section class="section section--tight">
     <div class="wrap">
-        <header class="section__head">
+        <header class="section__head section__head--split">
             <div>
-                <p class="eyebrow"><i></i>Receipts</p>
-                <h2 class="section__title" data-split>Numbers I can defend.</h2>
+                <p class="eyebrow eyebrow--rule">Now</p>
+                <h2 class="section__title" data-split>What I&rsquo;m up to.</h2>
             </div>
-            <p class="section__note" data-rise>
-                Every figure below has a commit, a dashboard, or a race bib behind it.
-            </p>
+            <figure class="globe" data-rise data-rise-delay="120">
+                <div class="globe__stage" data-globe></div>
+                <figcaption>Fairfield &middot; Stony Brook &middot; Bohemia &middot; Shelton &middot; San Francisco</figcaption>
+            </figure>
         </header>
 
-        <div class="stats">
-            <article class="stat" data-rise data-ghost="50%">
-                <div class="stat__body">
-                    <p class="stat__num">50%</p>
-                    <h3>Less API load</h3>
-                    <p>Optimized search scaling in Circular, cutting route-generation attempts 40% while holding &plusmn;1% distance accuracy.</p>
-                </div>
-            </article>
-            <article class="stat" data-rise data-rise-delay="90" data-ghost="700+">
-                <div class="stat__body">
-                    <p class="stat__num">700+</p>
-                    <h3>Members reached</h3>
-                    <p>AI Community @ SBU. Hands-on machine learning workshops for 80+ peers, as Project Manager.</p>
-                </div>
-            </article>
-            <article class="stat" data-rise data-rise-delay="180" data-ghost="4:54">
-                <div class="stat__body">
-                    <p class="stat__num">4:54</p>
-                    <h3>San Francisco Marathon</h3>
-                    <p>Finished August 2025 with primary ciliary dyskinesia. The training app on this page is the one I used to get there.</p>
-                </div>
-            </article>
+        <div class="stack">
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Researching</h3>
+                <p class="now__what">Wrist-based rep detection on Apple Watch, with Prof. Shubham Jain&rsquo;s lab at Stony Brook.</p>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Building</h3>
+                <p class="now__what">North Atlantic Industries&rsquo; product-lifecycle platform, live across 10+ departments.</p>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Up next</h3>
+                <p class="now__what">AI Solutions Engineering co-op at IBM in San Francisco, fall 2026.</p>
+            </div>
+            <div class="stack__row" data-rise>
+                <h3 class="mono">Running</h3>
+                <p class="now__what">Base miles for marathon #2. San Francisco was my first &mdash; 4:54, August 2025, with PCD.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════  LIGHT HALF  ═══════════════ -->
+<!-- ═══════════════  PAPER HALF  ═══════════════ -->
 <div class="paper">
 
 <!-- ─────────────────────────────  PROJECTS  ───────────────────────────── -->
 <section class="section" id="projects">
     <div class="wrap">
         <header class="section__head">
-            <div>
-                <p class="eyebrow"><i></i>Projects</p>
-                <h2 class="section__title" data-split>Three things I shipped.</h2>
-            </div>
+            <p class="eyebrow eyebrow--rule">Projects</p>
+            <h2 class="section__title" data-split>Things I&rsquo;ve built.</h2>
             <p class="section__note" data-rise>
                 One server that gives coding agents a research library, one iOS app I trained
                 a marathon on, and one tool that cleans up after data scientists.
             </p>
         </header>
 
-        <article class="project" data-rise data-ghost="01">
+        <article class="project" data-rise>
             <div class="project__head">
                 <span class="mono project__idx">01</span>
                 <h3>arXiv MCP Server</h3>
@@ -265,7 +248,7 @@
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
                 </a>
             </div>
-            <div class="project__media">
+            <div class="project__media" style="--ar: 1412 / 434">
                 <img src="arxiv-mcp-gif.gif" alt="arXiv MCP server running inside Claude Code" loading="lazy">
             </div>
             <div class="project__text">
@@ -280,7 +263,7 @@
             </div>
         </article>
 
-        <article class="project" data-rise data-ghost="02">
+        <article class="project" data-rise>
             <div class="project__head">
                 <span class="mono project__idx">02</span>
                 <h3>Circular</h3>
@@ -306,7 +289,7 @@
             </div>
         </article>
 
-        <article class="project" data-rise data-ghost="03">
+        <article class="project" data-rise>
             <div class="project__head">
                 <span class="mono project__idx">03</span>
                 <h3>nb2prod</h3>
@@ -316,7 +299,7 @@
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H7m10 0v10"/></svg>
                 </a>
             </div>
-            <div class="project__media">
+            <div class="project__media" style="--ar: 800 / 434">
                 <img src="logos/nb2prod-screenshot.jpeg" alt="nb2prod converting a Jupyter notebook into a structured Python project" loading="lazy">
             </div>
             <div class="project__text">
@@ -336,60 +319,55 @@
 <section class="section section--tight" id="stack">
     <div class="wrap">
         <header class="section__head">
-            <div>
-                <p class="eyebrow"><i></i>Stack</p>
-                <h2 class="section__title" data-split>What I reach for.</h2>
-            </div>
-            <p class="section__note" data-rise>
-                Everything above, grouped by what it's actually for.
-            </p>
+            <p class="eyebrow eyebrow--rule">Stack</p>
+            <h2 class="section__title" data-split>What I reach for.</h2>
         </header>
 
         <div class="stack">
             <div class="stack__row" data-rise>
                 <h3 class="mono">Languages</h3>
                 <div class="chips">
-                    <span class="chip">TypeScript / JavaScript</span><span class="chip">Python</span><span class="chip">C#</span>
-                    <span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Swift</span>
-                    <span class="chip">C</span><span class="chip">HTML &amp; CSS</span>
+                    <span class="chip" data-blob>TypeScript / JavaScript</span><span class="chip" data-blob>Python</span><span class="chip" data-blob>C#</span>
+                    <span class="chip" data-blob>Java</span><span class="chip" data-blob>SQL</span><span class="chip" data-blob>Swift</span>
+                    <span class="chip" data-blob>C</span><span class="chip" data-blob>HTML &amp; CSS</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
                 <h3 class="mono">Frameworks &amp; libraries</h3>
                 <div class="chips">
-                    <span class="chip">Angular</span><span class="chip">React</span><span class="chip">.NET</span>
-                    <span class="chip">EF Core</span><span class="chip">Flask</span><span class="chip">SwiftUI</span>
-                    <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">scikit-learn</span>
-                    <span class="chip">Hugging Face</span>
+                    <span class="chip" data-blob>Angular</span><span class="chip" data-blob>React</span><span class="chip" data-blob>.NET</span>
+                    <span class="chip" data-blob>EF Core</span><span class="chip" data-blob>Flask</span><span class="chip" data-blob>SwiftUI</span>
+                    <span class="chip" data-blob>PyTorch</span><span class="chip" data-blob>TensorFlow</span><span class="chip" data-blob>scikit-learn</span>
+                    <span class="chip" data-blob>Hugging Face</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
                 <h3 class="mono">Data &amp; systems</h3>
                 <div class="chips">
-                    <span class="chip">SQL Server</span><span class="chip">ETL pipelines</span><span class="chip">Distributed systems</span>
-                    <span class="chip">REST APIs</span><span class="chip">ChromaDB</span><span class="chip">AWS</span>
-                    <span class="chip">Observability</span><span class="chip">CI/CD</span>
+                    <span class="chip" data-blob>SQL Server</span><span class="chip" data-blob>ETL pipelines</span><span class="chip" data-blob>Distributed systems</span>
+                    <span class="chip" data-blob>REST APIs</span><span class="chip" data-blob>ChromaDB</span><span class="chip" data-blob>AWS</span>
+                    <span class="chip" data-blob>Observability</span><span class="chip" data-blob>CI/CD</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
                 <h3 class="mono">AI/ML</h3>
                 <div class="chips">
-                    <span class="chip">RAG</span><span class="chip">LLM tooling</span><span class="chip">Prompt engineering</span>
-                    <span class="chip">Embeddings</span><span class="chip">Information retrieval</span><span class="chip">MCP</span>
+                    <span class="chip" data-blob>RAG</span><span class="chip" data-blob>LLM tooling</span><span class="chip" data-blob>Prompt engineering</span>
+                    <span class="chip" data-blob>Embeddings</span><span class="chip" data-blob>Information retrieval</span><span class="chip" data-blob>MCP</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
                 <h3 class="mono">Testing &amp; practices</h3>
                 <div class="chips">
-                    <span class="chip">NUnit</span><span class="chip">Unit &amp; integration testing</span>
-                    <span class="chip">Accessibility</span><span class="chip">Code review</span><span class="chip">Agile</span>
+                    <span class="chip" data-blob>NUnit</span><span class="chip" data-blob>Unit &amp; integration testing</span>
+                    <span class="chip" data-blob>Accessibility</span><span class="chip" data-blob>Code review</span><span class="chip" data-blob>Agile</span>
                 </div>
             </div>
             <div class="stack__row" data-rise>
                 <h3 class="mono">Concepts</h3>
                 <div class="chips">
-                    <span class="chip">Data structures</span><span class="chip">Algorithms</span><span class="chip">OOP</span>
-                    <span class="chip">Computational geometry</span><span class="chip">Debugging</span>
+                    <span class="chip" data-blob>Data structures</span><span class="chip" data-blob>Algorithms</span><span class="chip" data-blob>OOP</span>
+                    <span class="chip" data-blob>Computational geometry</span><span class="chip" data-blob>Debugging</span>
                 </div>
             </div>
         </div>
@@ -402,11 +380,12 @@
 <section class="section" id="education">
     <div class="wrap">
         <div class="edu" data-rise>
-            <img class="edu__bg" src="sbu-campus.jpg" alt="" loading="lazy" aria-hidden="true">
-            <div class="grain" aria-hidden="true"></div>
+            <div class="edu__media screen" data-halftone data-halftone-gain="1.05" aria-hidden="true">
+                <img class="edu__bg dotted" src="sbu-campus.jpg" alt="" loading="lazy">
+            </div>
             <div class="edu__inner">
                 <div class="edu__lede">
-                    <p class="eyebrow"><i></i>Education</p>
+                    <p class="eyebrow">Education</p>
                     <h2>Stony Brook University</h2>
                     <p class="edu__deg">B.S. Computer Science (accelerated) &amp; Applied Mathematics and Statistics</p>
                     <dl class="edu__facts">
@@ -435,10 +414,8 @@
 <section class="section section--tight" id="life">
     <div class="wrap">
         <header class="section__head">
-            <div>
-                <p class="eyebrow"><i></i>Off the clock</p>
-                <h2 class="section__title" data-split>The rest of it.</h2>
-            </div>
+            <p class="eyebrow eyebrow--rule">Off the clock</p>
+            <h2 class="section__title" data-split>The rest of it.</h2>
             <p class="section__note" data-rise>
                 Running, cooking, my brothers, and a little sister who reminds me to stop working.
             </p>
@@ -461,20 +438,21 @@
 
 <!-- ─────────────────────────────  CONTACT  ───────────────────────────── -->
 <section class="cta" id="contact">
-    <img class="cta__bg" src="sbu-campus.jpg" alt="" loading="lazy" aria-hidden="true">
-    <div class="grain" aria-hidden="true"></div>
     <div class="wrap cta__inner">
         <div>
-            <p class="eyebrow"><i></i>Get in touch</p>
+            <p class="eyebrow"><i aria-hidden="true"></i>Get in touch</p>
             <h2 class="section__title" data-split>Tell me what you&rsquo;re building.</h2>
         </div>
         <div class="cta__side" data-rise>
             <p>Open to Summer 2027 internships in ML, infrastructure, and developer tools &mdash; and always happy to talk about any of the above.</p>
             <div class="cta__links">
-                <a href="mailto:anjan.r.athreya@gmail.com" class="pill pill--light" data-blob data-tooltip="Copy that">Email me</a>
-                <a href="https://www.linkedin.com/in/anjan-r-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>LinkedIn</a>
-                <a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" class="pill pill--ghost" data-blob>GitHub</a>
-                <a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" class="pill pill--ghost" data-blob data-tooltip="1-page PDF">Résumé</a>
+                <a href="mailto:anjan.r.athreya@gmail.com" class="btn btn--solid" data-blob data-tooltip="Copy that">
+                    Email me
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/anjan-r-athreya" target="_blank" rel="noopener" class="btn btn--ghost" data-blob>LinkedIn</a>
+                <a href="https://github.com/anjan-r-athreya" target="_blank" rel="noopener" class="btn btn--ghost" data-blob>GitHub</a>
+                <a href="Anjan-Athreya-Resume.pdf" download="Anjan-Athreya-Resume.pdf" class="btn btn--ghost" data-blob data-tooltip="1-page PDF">Résumé</a>
             </div>
         </div>
     </div>
