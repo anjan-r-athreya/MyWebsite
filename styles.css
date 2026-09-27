@@ -1162,3 +1162,22 @@ a { color: inherit; text-decoration: none; }
     .hero__inner { opacity: 1; }
     .hero__rail, .hero__flash { display: none; }
 }
+
+/* ═════════════════════════════  THINKING ORBS  ═════════════════════════════
+   Canvas orbs from thinking-orbs.js. The script sizes each canvas; these rules
+   only place them. */
+.orb { display: inline-block; flex: none; }
+
+.preloader__orb {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, calc(-100% - clamp(40px, 5vw, 56px)));
+}
+
+.stack__row h3 { display: flex; align-items: center; gap: 12px; align-self: start; }
+.stack__row h3 .orb { margin-top: -1px; }
+
+.project__orb { align-self: center; }
+
+.eyebrow .orb { margin-right: 12px; vertical-align: -5px; }
+.cta .orb { mix-blend-mode: screen; }

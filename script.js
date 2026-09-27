@@ -21,6 +21,7 @@
         if (!el) return Promise.resolve();
 
         var words = $$(".preloader__word", el);
+        var orb = $(".preloader__orb", el);
         document.body.classList.add("is-locked");
 
         if (reduced) {
@@ -38,6 +39,7 @@
                 if (i > 0) words[i - 1].classList.remove("is-on");
                 if (i < words.length) {
                     words[i].classList.add("is-on");
+                    if (orb) orb.setAttribute("data-orb", words[i].getAttribute("data-orb-state"));
                     i++;
                     setTimeout(step, i === words.length ? 620 : 380);
                 } else {
